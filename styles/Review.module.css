@@ -1,0 +1,53 @@
+.reviewContainer {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'image content content'
+    'image content content'
+    'image  stars stars'
+    'image author author';
+  background-color: var(--brand-purple);
+  width: 60%;
+  height: 30vh;
+  padding: 1rem;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.reviewImg {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+}
+
+.imgWrapper {
+grid-area: image;
+position: relative;
+display: block;
+overflow: hidden;
+height: 100%;
+}
+
+.reviewAuthor {
+  grid-area: author;
+    display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.reviewContent {
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.stars {
+    grid-area: stars;
+    display: flex;
+    justify-self: center;
+    width: 80%;
+}

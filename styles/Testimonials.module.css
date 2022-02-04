@@ -1,0 +1,9 @@
+.container {
+    width: calc(80vw + 5px);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--brand-pink);
+    margin: auto;
+    gap: 1rem;
+}
+

@@ -1,0 +1,32 @@
+.tab {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    padding: 2vw;
+    background-color: var(--brand-pink);
+    font-size: 1.5rem;
+    color: var(--main-bg);
+    
+}
+
+.tab:hover {
+    color: thistle;
+    cursor: pointer;
+    background-color: var(--brand-purple);
+}
+
+.tab::after{
+position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: exclusion;
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+:root {
+  --main-bg: #07050f;
+  --brand-purple: #623E8F;
+  --brand-pink: #FF82B1;
+  --brand-hot-pink: #A649A2;
+}
+
+html,
+body {
+  background-color: var(--main-bg);
+  padding: 0;
+  margin: 0;
+font-family: 'VT323', monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+

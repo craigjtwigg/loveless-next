@@ -1,0 +1,86 @@
+.sectionWrapper {
+    display: flex;
+    width: calc( 80vw + 5px);
+    margin: 0 auto;
+    background-color: var(--brand-pink);
+    
+}
+
+.section {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title content"
+                         "video content"
+                         "more more";
+    background-color: var(--brand-pink);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    
+}
+
+.sectionTitle {
+    font-size: 4rem;
+    grid-area: title;
+    padding: 0;
+    max-height: 4rem;
+    justify-self: center;
+}
+
+.playlist {
+    grid-area: content;
+}
+
+.sectionImage {
+ object-fit: cover;
+}
+
+.imageWrapper {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    grid-area: image;
+}
+
+.videoWrapper {
+    grid-area: video;
+      position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+    
+}
+
+.videoWrapper .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.more {
+    position: relative;
+    display: flex;
+    grid-area: more;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding: 2vw;
+    cursor: pointer;
+}
+
+.more:hover::after {
+   position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: exclusion;
+}
