@@ -1,0 +1,11 @@
+.container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+    width: calc( 80vw + 5px);
+    margin: 0 auto;
+    background-color: var(--brand-pink);
+    padding: 1.5rem;
+    text-align: center;
+    gap: 1.5rem;
+}

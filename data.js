@@ -22,3 +22,20 @@ export const reviewData = [
         stars: 5,
     }
 ]
+
+export const faqData =[
+
+    {
+        q: 'Where is Lovess Studio?',
+        a: 'On Greenfield Road in loveley Colne, Lancashire!',
+    },
+    {
+        q: 'Who is the producer at Loveless Studio?',
+        a: 'Matt Heap is the owner and producer at Loveless Studio.',
+    },
+    {
+        q: 'Will you make my music sound incredible?',
+        a: 'yes.'
+    }
+
+]

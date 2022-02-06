@@ -5,6 +5,7 @@ import TestimonialsPreview from './TestimonialsPreview';
 import Intro from './Intro';
 import GearPreview from './GearPreview';
 import ContactForm from './ContactForm';
+import FaqPreview from './FaqPreview';
 
 
 export default function Content(props) {
@@ -14,6 +15,7 @@ export default function Content(props) {
             <ShowreelPreview showReelRef={props.showReelRef}/>
             <TestimonialsPreview />
             <GearPreview />
+            <FaqPreview />
             <ContactForm />
         </div>
     )
