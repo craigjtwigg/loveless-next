@@ -1,6 +1,6 @@
 import { reviewData } from '../data';
 import Image from 'next/image';
-import styles from '../styles/Review.module.css';
+import styles from '../styles/ReviewCard.module.css';
 import Star from '../public/assets/star.png';
 
 export default function Review(props) {

@@ -8,6 +8,7 @@ export default function Header() {
       <div className={styles.headerImage}>
         <Image
         className={styles.matt}
+        priority='true'
           src={MattHeader}
           alt="promotional image of Loveless Studio producer Matt Heap at the studio."
           width={1267}

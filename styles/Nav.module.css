@@ -2,7 +2,7 @@
     position: relative;
     bottom: 10vh;
     z-index: 2;
-    background-image: linear-gradient(rgba(255,0,0,0), var(--main-bg) 40%);
+   
     height: 20vh;
     width: 100vw;
     display: flex;

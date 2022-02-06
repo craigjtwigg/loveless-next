@@ -1,7 +1,7 @@
 import { reviewData } from '../data';
 import { useRef } from 'react';
-import styles from '../styles/Testimonials.module.css';
-import Review from './Review';
+import styles from '../styles/TestimonialsPreview.module.css';
+import ReviewCard from './ReviewCard';
 import Carousel from 'react-elastic-carousel';
 
 export default function Testimonials() {
@@ -12,7 +12,7 @@ const totalPages = Math.ceil(reviewData.length / itemsPerPage)
 let resetTimeout;
 
   return (
-    <div className={styles.container}>
+    <div id='testimonials' className={styles.container}>
       <Carousel
         ref={carouselRef}
     enableAutoPlay={true}
@@ -34,7 +34,7 @@ let resetTimeout;
       >
         {reviewData.map((review) => (
           <>
-            <Review
+            <ReviewCard
               author={review.author}
               image={review.imageSrc}
               stars={review.stars}

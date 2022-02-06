@@ -1,0 +1,52 @@
+.container {
+     display: flex;
+     justify-content: center;
+    width: calc( 80vw + 5px);
+    margin: 0 auto;
+    background-color: var(--brand-pink);
+    padding: 1.5rem;
+    
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    background-color: var(--brand-pink);
+    flex-direction: column;
+    width: 60%;
+    gap: 1rem;
+}
+
+.nameEmailWrapper, .name, .email, .subjectWrapper, .subject, .messageWrapper, .message {
+    display: flex;
+    width: 100%;
+}
+
+.nameEmailWrapper {
+    justify-content: space-between;
+}
+
+.name, .email {
+    width: 22vw;
+}
+
+.name, .email, .subject {
+    height: 2.5rem;
+    padding: 0.5rem;
+}
+
+.message {
+    padding: 0.5rem;
+    min-height: 20vh;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.messageWrapper, .subjectWrapper {
+    flex-direction: column;
+}
+
+.button {
+    padding: 1rem;
+    background-color: var(--brand-purple);
+}

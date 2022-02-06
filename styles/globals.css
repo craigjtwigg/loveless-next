@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 :root {
   --main-bg: #07050f;
-  --brand-purple: #623E8F;
-  --brand-pink: #FF82B1;
+  /* --brand-purple: #623E8F; */
+  --brand-purple: rgb(131, 131, 131);
+  /* --brand-pink: #FF82B1; */
+  --brand-pink: white;
   --brand-hot-pink: #A649A2;
 }
 
 html,
 body {
   background-color: var(--main-bg);
+
+  background: 
+	linear-gradient(151deg, rgb(0, 0, 0), rgba(56, 36, 97, 0)),
+	radial-gradient(circle at 40% 124%, rgb(77, 19, 88), rgba(105, 39, 102, 0)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
   padding: 0;
   margin: 0;
 font-family: 'VT323', monospace;

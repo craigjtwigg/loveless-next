@@ -1,11 +1,11 @@
-import styles from '../styles/Showreel.module.css';
+import styles from '../styles/ShowreelPreview.module.css';
 import Image from 'next/image';
 import ShowReeelImg from '../public/assets/showreelstock.jpg';
 
-export default function Showreel() {
+export default function Showreel({showreelRef}) {
   return (
     <div className={styles.sectionWrapper}>
-      <section className={styles.section}>
+      <section id='showreel' ref={showreelRef} className={styles.section}>
 
         <h2 className={styles.sectionTitle}>SHOWREEL</h2>
        
