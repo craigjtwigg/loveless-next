@@ -1,4 +1,3 @@
-import { reviewData } from '../data';
 import Image from 'next/image';
 import styles from '../styles/ReviewCard.module.css';
 import Star from '../public/assets/star.png';
@@ -17,8 +16,8 @@ export default function Review(props) {
         />
       </div>
       <div className={styles.stars}>
-        {stars.map((star) => (
-          <div key={props.author} className={styles.starWrapper}>
+        {stars.map((star, idx) => (
+          <div key={idx} className={styles.starWrapper}>
             <Image src={Star} alt={'Star rating for Loveless Studio'} />
           </div>
         ))}

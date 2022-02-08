@@ -1,11 +1,9 @@
 import styles from '../styles/ShowreelPreview.module.css';
-import Image from 'next/image';
-import ShowReeelImg from '../public/assets/showreelstock.jpg';
 
-export default function Showreel({showreelRef}) {
+export default function Showreel() {
   return (
     <div className={styles.sectionWrapper}>
-      <section id='showreel' ref={showreelRef} className={styles.section}>
+      <section id='showreel' className={styles.section}>
 
         <h2 className={styles.sectionTitle}>SHOWREEL</h2>
        
@@ -17,7 +15,7 @@ export default function Showreel({showreelRef}) {
           height="100%"
           frameBorder="0"
           allowFullScreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          //allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
 
         <div className={styles.videoWrapper}>
@@ -28,7 +26,7 @@ export default function Showreel({showreelRef}) {
             src="https://www.youtube.com/embed/caiPVlPHj3Q"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            //allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>

@@ -12,7 +12,7 @@ export default function Content(props) {
     return (
         <div className={styles.content}>
             <Intro />
-            <ShowreelPreview showReelRef={props.showReelRef}/>
+            <ShowreelPreview/>
             <TestimonialsPreview />
             <GearPreview />
             <FaqPreview />

@@ -1,6 +1,6 @@
 .sectionWrapper {
     display: flex;
-    width: calc( 80vw + 5px);
+    width: 100%;
     margin: 0 auto;
     background-color: var(--brand-pink);
     

@@ -16,11 +16,11 @@
 }
 
 .headerImage {
-  position: absolute;
+  position: relative;
   display: block;
   width: 100vw;
   height: 110vh;
-  /*animation: shake-opacity 30ms infinite;*/
+  animation: shake-opacity 40ms infinite;
   overflow: hidden;
   
 }
@@ -56,7 +56,7 @@
 @keyframes shake-opacity {
   0% {
     opacity: 1;
-    filter: brightness(1.5);
+    filter: brightness(1.2);
     -webkit-filter: brightness(0.5);
   }
 
@@ -71,14 +71,14 @@
   }
   30% {
     opacity: 1;
-    filter: brightness(1.5) hue-rotate(20deg);
-    -webkit-filter: brightness(1.5) hue-rotate(120deg);
+    filter: brightness(1.2) hue-rotate(20deg);
+    -webkit-filter: brightness(1.2) hue-rotate(120deg);
   }
 
   50% {
     opacity: 1;
-    filter: brightness(1.5);
-    -webkit-filter: brightness(1.5);
+    filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);
   }
   60% {
     opacity: 1;
@@ -93,7 +93,7 @@
   }
   90% {
     opacity: 1;
-    filter: brightness(1.5) hue-rotate(20deg);
-    -webkit-filter: brightness(1.5) hue-rotate(120deg);
+    filter: brightness(1.2) hue-rotate(20deg);
+    -webkit-filter: brightness(1.2) hue-rotate(120deg);
   }
 }
