@@ -1,17 +1,17 @@
 .container {
      display: flex;
      justify-content: center;
-    width: calc( 80vw + 5px);
+    width: 100%;
     margin: 0 auto;
-    background-color: var(--brand-pink);
-    padding: 1.5rem;
+    
+    padding: 3rem;
     
 }
 
 .form {
     display: flex;
     align-items: center;
-    background-color: var(--brand-pink);
+    
     flex-direction: column;
     width: 60%;
     gap: 1rem;

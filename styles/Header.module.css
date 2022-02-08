@@ -11,7 +11,10 @@
 
 .matt {
   object-fit: cover;
-  object-position: center -10vh;
+  object-position: 20vw -10vh;
+     mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)35%, rgba(0, 0, 0, 0.096) 60%, rgba(0, 0, 0, 0.027) 70%,transparent);
+
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)35%, rgba(0, 0, 0, 0.096) 60%, rgba(0, 0, 0, 0.027) 70%,transparent);
   
 }
 
@@ -20,7 +23,7 @@
   display: block;
   width: 100vw;
   height: 110vh;
-  animation: shake-opacity 40ms infinite;
+ /* animation: shake-opacity 40ms infinite; */
   overflow: hidden;
   
 }
@@ -66,13 +69,13 @@
 
   20% {
     opacity: 1;
-    filter: hue-rotate(120deg);
-    -webkit-filter: hue-rotate(120deg);
+    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
   }
   30% {
     opacity: 1;
-    filter: brightness(1.2) hue-rotate(20deg);
-    -webkit-filter: brightness(1.2) hue-rotate(120deg);
+    filter: brightness(1.2) hue-rotate(60deg);
+    -webkit-filter: brightness(1.2) hue-rotate(90deg);
   }
 
   50% {
@@ -88,12 +91,12 @@
   }
   80% {
     opacity: 1;
-    filter: hue-rotate(120deg);
-    -webkit-filter: hue-rotate(120deg);
+    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
   }
   90% {
     opacity: 1;
-    filter: brightness(1.2) hue-rotate(20deg);
-    -webkit-filter: brightness(1.2) hue-rotate(120deg);
+    filter: brightness(1.2) hue-rotate(60deg);
+    -webkit-filter: brightness(1.2) hue-rotate(60deg);
   }
 }

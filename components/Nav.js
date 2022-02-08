@@ -5,10 +5,10 @@ export default function Nav(props) {
   return (
     <div className={styles.navWrapper}>
       <nav className={styles.nav}>
-        <NavTab reference={props.showreelRef} section="SHOWREEL" />
-        <NavTab section="GEAR" />
-        <NavTab section="TESTIMONIALS" />
-        <NavTab section="FAQ" />
+        <NavTab reference={props.showreelRef} section="showreel" />
+        <NavTab section="gear" />
+        <NavTab section="testimonials" />
+        <NavTab section="faq" />
       </nav>
     </div>
   );

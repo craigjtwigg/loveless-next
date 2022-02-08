@@ -7,10 +7,10 @@
      justify-content: center;
     width: 100%;
     margin: 0 auto;
-    background-color: var(--brand-pink);
-    padding: 1.5rem;
+    
+    padding: 3rem;
     text-align: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .text {

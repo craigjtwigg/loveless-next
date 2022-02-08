@@ -5,16 +5,20 @@
     align-items: center;
     width: 20vw;
     padding: 2vw;
-    background-color: var(--brand-pink);
     font-size: 1.5rem;
     color: var(--main-bg);
+    
+     background: 
+	linear-gradient(0deg, #ff82b26e, #692ba748),
+
+	url(https://grainy-gradients.vercel.app/noise.svg);
     
 }
 
 .tab:hover {
     color: thistle;
     cursor: pointer;
-    background-color: var(--brand-purple);
+    background-color: rgb(43, 9, 9);
 }
 
 .tab::after{

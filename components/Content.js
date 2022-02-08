@@ -9,14 +9,22 @@ import FaqPreview from './FaqPreview';
 
 
 export default function Content(props) {
-    return (
-        <div className={styles.content}>
+    return (<> <div className={styles.contentTop}>
             <Intro />
             <ShowreelPreview/>
-            <TestimonialsPreview />
-            <GearPreview />
+           
+        </div>
+        <div className={styles.contentGap}>
+             <TestimonialsPreview />
+           
+            
+        </div>
+
+        <div className={styles.contentBottom}>
+             <GearPreview />
             <FaqPreview />
             <ContactForm />
-        </div>
+        </div></>
+       
     )
 }

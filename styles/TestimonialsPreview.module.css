@@ -2,8 +2,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--brand-pink);
+    
     margin: auto;
-    gap: 1rem;
+    gap: 2rem;
 }
 

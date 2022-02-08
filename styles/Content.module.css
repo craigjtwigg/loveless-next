@@ -1,10 +1,57 @@
-.content{
+.contentTop{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: calc(80vw + 5px);
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    background-color: var(--main-bg);
+    background: 
+	linear-gradient(151deg, #ff82b26e, #6c439448),
+	radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+     mask-image: linear-gradient(rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.5) 70%, transparent);
+
+    -webkit-mask-image:linear-gradient(rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0.5) 70%, transparent);
+}
+
+.contentTop::after{
+    position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+  opacity: 0.5;
+  
+  background-repeat: repeat;
+  mix-blend-mode: exclusion;
+  pointer-events: none;
+}
+
+.contentGap {
+    margin: 5rem
+}
+
+.contentBottom{
    
+    padding-top: 5rem;
     z-index: 2;
     height: 100%;
     width: calc(80vw + 5px);
     display: flex;
     margin: 0 auto;
     flex-direction: column;
+     background-color: rgb(43, 9, 9);
+    background: 
+	linear-gradient(20deg, #ff82b26e, #6c439448),
+	radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+   
+     mask-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1));
 
+    -webkit-mask-image:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 1));
 }
