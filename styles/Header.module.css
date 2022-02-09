@@ -1,21 +1,88 @@
 .header {
+  position: relative;
   width: 100vw;
   height: 110vh;
   overflow: hidden;
-  mask-image: gradient(linear, left top, left bottom, 
-    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
-    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  );
+}
+
+.loveless {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  z-index: 5;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 6rem;
+  margin: 0px;
   
 }
+
+.location {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.logo, .location, .heroText {
+  background-color: var(--main-bg);
+  background: linear-gradient(151deg, #ff82b26e, #6c439448),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta {
+  padding: 2rem;
+  
+  color: rgb(255, 255, 255);
+  background-color: rgb(252, 58, 139);
+  border: none;
+  border-radius: 50px;
+  font-family: inherit;
+  margin: 20px;
+}
+
+
 
 .matt {
   object-fit: cover;
   object-position: 20vw -10vh;
-     mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)35%, rgba(0, 0, 0, 0.096) 60%, rgba(0, 0, 0, 0.027) 70%,transparent);
+  mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 0.096) 60%,
+    rgba(0, 0, 0, 0.027) 70%,
+    transparent
+  );
 
-    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1)35%, rgba(0, 0, 0, 0.096) 60%, rgba(0, 0, 0, 0.027) 70%,transparent);
-  
+  -webkit-mask-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 0.096) 60%,
+    rgba(0, 0, 0, 0.027) 70%,
+    transparent
+  );
+  filter: brightness(1.5);
 }
 
 .headerImage {
@@ -23,9 +90,8 @@
   display: block;
   width: 100vw;
   height: 110vh;
- /* animation: shake-opacity 40ms infinite; */
+  /* animation: shake-opacity 40ms infinite; */
   overflow: hidden;
-  
 }
 
 .headerImage::before {
