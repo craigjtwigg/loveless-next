@@ -1,7 +1,7 @@
 .header {
   position: relative;
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
   overflow: hidden;
   mask-image: gradient(
     linear,
@@ -21,19 +21,52 @@
 
 .loveless {
   position: absolute;
-  top: 30%;
-  left: 7%;
+  top: 20%;
+  left: 2%;
   z-index: 5;
-  
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
-.logo {
-  font-size: 6rem;
-  margin: 0px;
+
+.text {
+  text-align: center;
+  background-color: var(--main-bg);
+  background: linear-gradient(151deg, #d3ccced3, #fcf8ffa4),
+    radial-gradient(circle at 40% 124%, rgb(64, 28, 148), rgba(169, 34, 247, 0.541)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.678);
+  mask-mode: unset;
   
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
+}
+
+.text::selection{
+  background: rgba(241, 169, 223, 0.486);
+}
+
+.textWrapper {
+        backdrop-filter: blur(25px) saturate(22%);
+    -webkit-backdrop-filter: blur(25px) saturate(22%);
+ 
+   
+ 
+}
+
+
+.logo {
+  font-size: 5em;
+  margin: 0px;
+  font-weight: 400;
+  padding-bottom: 2rem;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
 }
 
 .location {
@@ -41,7 +74,14 @@
   margin: 20px;
 }
 
-.logo, .location, .heroText {
+.heroText {
+  font-size: 1.5rem;
+}
+
+.logo,
+.location,
+.heroText,
+.watchListen {
   background-color: var(--main-bg);
   background: linear-gradient(151deg, #ff82b26e, #6c439448),
     radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
@@ -53,7 +93,7 @@
 
 .cta {
   padding: 2rem;
-  
+
   color: rgb(255, 255, 255);
   background-color: rgb(252, 58, 139);
   border: none;
@@ -62,11 +102,14 @@
   margin: 20px;
 }
 
-
+.cta:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+}
 
 .matt {
   object-fit: cover;
-  object-position: 20vw -10vh;
+  object-position: 20vw -20vh;
   mask-image: linear-gradient(
     to left,
     rgba(0, 0, 0, 1) 35%,
@@ -82,7 +125,7 @@
     rgba(0, 0, 0, 0.027) 70%,
     transparent
   );
-  filter: brightness(1.5);
+  filter: grayscale(1) brightness(1.5) contrast(1.5);
 }
 
 .headerImage {

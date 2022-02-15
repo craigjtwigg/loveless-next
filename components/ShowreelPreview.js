@@ -1,43 +1,36 @@
 import styles from '../styles/ShowreelPreview.module.css';
+import Spotify from './Spotify';
+import Youtube from './Youtube';
+import Link from 'next/link';
 
 export default function Showreel() {
   return (
     <div className={styles.sectionWrapper}>
-      <section id='showreel' className={styles.section}>
+      <section id="showreel" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Playlist and Radio ready professional production</h2>
+          <p>
+          Loveless Studio productions have featured on major radio shows
+          such as the Radio One Rock Show, BBC Introducing, XFM and Radio X as well
+          as countless official Spotify playlists and have been published by labels such
+          as Sony Records, Music For Nations, Society Of Losers and Scyla. 
+          </p>
+       <div className={styles.quoteWrapper}>
+          <p className={styles.quote}>
+         " Great attention to detail and fast delivery on a project we did with Matt and Sony Music / Music For Nations "
+        </p>
+        <p className={styles.quoteAuthor}>- Bobby Pook, <Link href="https://www.blanketofficial.com/"><a>Blanket</a></Link></p>
+       </div>
+       <div className={styles.videoWrapper}>
+             <Youtube videoId="0ET5pQX3iXs" />
+       </div>
 
-        <h2 className={styles.sectionTitle}>SHOWREEL</h2>
        
 
-        <iframe
-          className={styles.playlist}
-          src="https://open.spotify.com/embed/playlist/3uur1MA6yUDzc3yeZVceCX?utm_source=generator&theme=0"
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          allowFullScreen=""
-          //allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        ></iframe>
-
-        <div className={styles.videoWrapper}>
-          <iframe
-          className={styles.video}
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/caiPVlPHj3Q"
-            title="YouTube video player"
-            frameBorder="0"
-            //allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+       
+        <div className={styles.more}>
+          ... HEAR AND SEE MORE EXAMPLES FROM LOVELESS STUDIO
         </div>
-
-         <div className={styles.more}>
-           ... HEAR AND SEE MORE EXAMPLES FROM LOVELESS STUDIO
-         </div>
-
       </section>
     </div>
   );
 }
-
-

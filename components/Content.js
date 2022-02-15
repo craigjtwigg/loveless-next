@@ -9,8 +9,10 @@ import FaqPreview from './FaqPreview';
 
 
 export default function Content(props) {
-    return (<> <div className={styles.contentTop}>
-            <Intro />
+    return (<> 
+    <Intro />
+    <div className={styles.contentTop}>
+            
             <ShowreelPreview/>
            
         </div>

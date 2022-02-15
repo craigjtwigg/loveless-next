@@ -1,0 +1,10 @@
+.videoWrapper {
+  color: rgb(63, 23, 23);
+
+  background: linear-gradient(0deg, #8b264d6e, #692ba748),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  display: flex;
+  /*padding: 0.5rem;*/
+  background-color: white;
+  height: 100%;
+}

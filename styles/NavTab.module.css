@@ -4,19 +4,21 @@
     justify-content: center;
     align-items: center;
     width: 20vw;
-    padding: 2vw;
-    font-size: 1.5rem;
-    color: var(--main-bg);
     
-     background: 
-	linear-gradient(0deg, #ff82b26e, #692ba748),
-
+    font-size: 1.5rem;
+    color: rgb(219, 177, 219);
+    
+        background: 
+	linear-gradient(0deg, #eb3f816e, #49276948),
+	radial-gradient(circle at 70% 124%, rgba(143, 44, 158, 0.473), rgba(255, 0, 0, 0)),
 	url(https://grainy-gradients.vercel.app/noise.svg);
     
 }
 
+
+
 .tab:hover {
-    color: thistle;
+    color: white;
     cursor: pointer;
     background-color: rgb(43, 9, 9);
 }
@@ -29,7 +31,7 @@ position: absolute;
   left: 0;
   content: ' ';
   background-image: url('../public/assets/vhs01.gif');
-
+  border-radius: inherit;
   background-size: cover;
   background-repeat: repeat;
   mix-blend-mode: exclusion;

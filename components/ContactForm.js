@@ -2,7 +2,7 @@ import styles from '../styles/ContactForm.module.css';
 
 export default function ContactForm() {
   return (
-    <section className={styles.container}>
+    <section id='contact' className={styles.container}>
       <form className={styles.form}>
         <div className={styles.nameEmailWrapper}>
           <div className={styles.nameWrapper}>
