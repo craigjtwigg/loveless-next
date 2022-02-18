@@ -51,3 +51,10 @@
    
      
 }
+
+
+.audio {
+    position: sticky;
+    bottom: 0px;
+    z-index: 100;
+}

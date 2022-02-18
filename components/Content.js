@@ -6,6 +6,7 @@ import Intro from './Intro';
 import GearPreview from './GearPreview';
 import ContactForm from './ContactForm';
 import FaqPreview from './FaqPreview';
+import AudioPlayer from './AudioPlayer';
 
 
 export default function Content(props) {
@@ -26,7 +27,11 @@ export default function Content(props) {
              <GearPreview />
             <FaqPreview />
             <ContactForm />
-        </div></>
+        </div>
+        <div className={styles.audio}>
+        <AudioPlayer />
+      </div>
+    </>
        
     )
 }

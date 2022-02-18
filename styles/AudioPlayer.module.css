@@ -1,0 +1,10 @@
+.container {
+    width: 100vw;
+    height: 5vh;
+    background-color: palevioletred;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
