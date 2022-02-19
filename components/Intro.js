@@ -6,9 +6,9 @@ export default function Intro() {
   return (
     <>
     <section className={styles.container}>
-      <div className={styles.text}>
+      <h2 className={styles.text}>
          Loveless Studio is a purpose built recording studio in Lancashire, England trusted by Artists, Record Labels and Industry Professionals for over 10 years.
-      </div>
+      </h2>
      
  
     </section>

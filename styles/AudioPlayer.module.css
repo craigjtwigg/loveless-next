@@ -1,10 +1,40 @@
 .container {
-    width: 100vw;
-    height: 5vh;
-    background-color: palevioletred;
-    color: black;
+    width: 50%;
+    height: 8vh;
+    
+     background: 
+	linear-gradient(151deg, rgba(14, 2, 14, 0.644), rgba(17, 10, 31, 0.877)),
+	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.356), rgb(36, 4, 34)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+    color: var(--brand-purple);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 2rem;
+    position: sticky;
+border-radius: 20px 20px 0 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+   height: 100%;
+}
+
+.iconWrapper {
+    filter: invert(1) brightness(0.9);
+    mix-blend-mode: color-dodge;
+    
+}
+
+.icon {
+    transform: scale(2);
+}
+
+.icon:hover {
+    transform: scale(2.1);
+    cursor: pointer;
+    filter: brightness(1.5);
 }

@@ -5,7 +5,7 @@
 :root {
   --main-bg: #07050f;
   /* --brand-purple: #623E8F; */
-  --brand-purple: rgb(131, 131, 131);
+  --brand-purple: rgb(166, 78, 248);
   /* --brand-pink: #FF82B1; */
   --brand-pink: white;
   --brand-hot-pink: #A649A2;
@@ -14,7 +14,6 @@
 html,
 body {
   background-color: var(--main-bg);
-
   background: 
 	linear-gradient(151deg, rgb(0, 0, 0), rgba(56, 36, 97, 0)),
 	radial-gradient(circle at 40% 124%, rgb(10, 4, 37), rgba(105, 39, 102, 0)),
@@ -22,7 +21,7 @@ body {
   padding: 0;
   margin: 0;
 font-family: 'Josefin Sans', sans-serif;
-
+  scrollbar-color: var(--brand-purple) var(--main-bg) ;
 
 
 }
@@ -32,8 +31,12 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 p {
-  font-weight: 300;
+  font-size: 2rem;
 }
 
 * {

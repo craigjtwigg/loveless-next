@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.logoWrapper {
+    height: 15vh;
+    width: 10vw;
+    position: relative;
+}
+
+.logo {
+    filter: invert(1) brightness(0.9);
+    height: 100%;
+    mix-blend-mode: color-dodge;
+}

@@ -2,21 +2,42 @@
   position: relative;
   display: grid;
   margin: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-areas:
-    'image content content'
-    'image content content'
-    'image  stars stars'
-    'image author author';
-       background: 
-	linear-gradient(0deg, #97cf9a6e, #260a2948),
+    'content content image'
+    'content content image'
+    'stars stars image'
+    'author author image';
 
-	url(https://grainy-gradients.vercel.app/noise.svg);
-  width: 60%;
-  height: 40vh;
-  padding: 1rem;
-  gap: 1rem;
+  width: 100%;
+  height: 80vh;
+
+  gap: 0.5rem;
   overflow: hidden;
+    
+    border-radius: 10px;
+     mix-blend-mode: exclusion;
+    mask-image: linear-gradient(
+    to bottom,
+    transparent 1%,
+    rgba(0, 0, 0, 1) 10%,
+     rgba(0, 0, 0, 1) 90%,
+     transparent 99%
+    );
+}
+
+.reviewContainer::after {
+    position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: lighten;
 }
 
 .imgWrapper::after{
@@ -30,13 +51,14 @@ position: absolute;
   opacity: 0.5;
   background-size: cover;
   background-repeat: repeat;
-  mix-blend-mode: exclusion;
+ 
 }
 
 .reviewImg {
   object-fit: cover;
-  object-position: center;
+ 
   position: absolute;
+  filter: grayscale(1) brightness(1.1) contrast(1.5) ;
 }
 
 .imgWrapper {
@@ -45,6 +67,11 @@ position: relative;
 display: block;
 overflow: hidden;
 height: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent 4%,
+    rgba(0, 0, 0, 1) 50%,
+    transparent);
 }
 
 .reviewAuthor {
@@ -53,7 +80,15 @@ height: 100%;
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  background-color: var(--main-bg);
+  background: linear-gradient(151deg, #ff82b26e, #6c439448),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
 }
 
 .reviewContent {
@@ -62,7 +97,16 @@ height: 100%;
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: var(--main-bg);
+  background: linear-gradient(151deg, #ff82b26e, #6c439448),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
 }
 
 .stars {
@@ -70,5 +114,6 @@ height: 100%;
     display: flex;
     justify-self: center;
     width: 60%;
-   
+    filter: invert(1) brightness(0.9);
+    mix-blend-mode: color-dodge;
 }
