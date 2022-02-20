@@ -13,7 +13,7 @@
     align-items: center;
     
     flex-direction: column;
-    width: 90%;
+    width: 60%;
     gap: 1rem;
 }
 
@@ -27,28 +27,31 @@
 }
 
 .name, .email {
-    width: 40vw;
+    width: 26vw;
 }
 
 .name, .email, .subject {
-    height: 2.5rem;
+    height: 3.5rem;
     padding: 0.5rem;
+    font-size: 2rem;
 }
-.container {
+.label {
 background: linear-gradient(151deg, #ff82b26e, #8a59bb48),
     radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 2rem;
 }
 
 .message {
     padding: 0.5rem;
-    min-height: 20vh;
+    min-height: 30vh;
     min-width: 100%;
     max-width: 100%;
-   
+    font-size: 2rem;
+
 }
 
 .messageWrapper, .subjectWrapper {
@@ -56,13 +59,48 @@ background: linear-gradient(151deg, #ff82b26e, #8a59bb48),
 }
 
 .button {
-    padding: 1rem;
-    background-color: var(--brand-purple);
+  padding: 2rem;
+position: relative;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 3px solid rgb(166, 78, 248);
+  border-radius: 50px;
+  font-family: inherit;
+  margin: 20px; mask-mode: unset;
+  transition: ease-in 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background:rgb(158, 58, 252);
+  box-shadow: 0 3px 10px rgba(26, 25, 25, 0.5), 0 2px 10px rgba(48, 32, 54, 0.5);
+  cursor: pointer;
+}
+
+.button:after{
+    position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+  border-radius: inherit;
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: difference;
 }
 
 .email, .name, .message, .subject {
      background-color: rgba(0, 0, 0, 0.267);
-     border: solid 3px pink;
+     border: solid 3px rgb(166, 78, 248);
      border-radius: 10px;
-     color: white;
+     color: pink;
+     transition: 0.1s ease;
+}
+
+
+.email:focus, .name:focus, .message:focus, .subject:focus {
+     border: solid 5px pink;
+     outline:none;
 }

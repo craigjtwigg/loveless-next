@@ -1,0 +1,79 @@
+.active {
+       width: 100%;
+    height: 10vh;
+    
+     /* background: 
+	linear-gradient(151deg, rgba(14, 2, 14, 0.644), rgba(17, 10, 31, 0.877)),
+	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.356), rgb(36, 4, 34)),
+	url(https://grainy-gradients.vercel.app/noise.svg); */
+    color: var(--brand-purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    position: sticky;
+    top:0px;
+    z-index: 100;
+    transition: 0.5s ease-in;
+
+    mask-image: linear-gradient(
+     to bottom,
+    rgba(0, 0, 0, 1)70%,
+    rgba(0, 0, 0, 0.5) 90%,
+    transparent
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1)70%,
+    rgba(0, 0, 0, 0.5) 90%,
+    transparent
+  );
+}
+
+.active::after {
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs02.gif');
+  opacity: 0.2;
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: luminosity;
+}
+
+.hidden {
+      width: 100%;
+    height: 0px;
+     background: 
+	linear-gradient(151deg, rgba(14, 2, 14, 0.644), rgba(17, 10, 31, 0.877)),
+	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.356), rgb(36, 4, 34)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+    color: var(--brand-purple);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    filter: opacity(0);
+    pointer-events: none;
+       
+       z-index: 200;
+}
+
+.logo {
+ text-align: center;
+  background-color: var(--main-bg);
+  background: linear-gradient(151deg, #d3ccced3, #fcf8ffe0),
+    radial-gradient(circle at 40% 124%, rgb(64, 28, 148), rgba(169, 34, 247, 0.541)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.678);
+  mask-mode: unset;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
+}

@@ -28,9 +28,9 @@ export default function Content(props) {
             <FaqPreview /> */}
             <ContactForm />
         </div>
-        <div className={styles.audio}>
+        {/* <div className={styles.audio}>
         <AudioPlayer />
-      </div>
+      </div> */}
     </>
        
     )

@@ -3,7 +3,7 @@ import MattHeader from '../public/assets/mattrear.jpg';
 import Hero from './Hero';
 import styles from '../styles/Header.module.css';
 
-export default function Header() {
+export default function Header({ref}) {
   return ( <>
       <header className={styles.header}>
       <div className={styles.headerImage}>
@@ -19,7 +19,7 @@ export default function Header() {
       </div>
      
     </header>
-     <Hero /></>
+     <Hero ref={ref}/></>
 
   );
 }

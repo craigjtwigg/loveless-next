@@ -6,7 +6,7 @@ export default function ContactForm() {
       <form className={styles.form}>
         <div className={styles.nameEmailWrapper}>
           <div className={styles.nameWrapper}>
-            <label htmlFor="name">Your Name</label>
+            <label className={styles.label} htmlFor="name">Your Name</label>
             <input
               type="text"
               name="name"
@@ -15,7 +15,7 @@ export default function ContactForm() {
             />
           </div>
           <div className={styles.emailWrapper}>
-            <label htmlFor="email">E-Mail</label>
+            <label className={styles.label} htmlFor="email">E-Mail</label>
             <input
               type="email"
               name="email"
@@ -25,7 +25,7 @@ export default function ContactForm() {
           </div>
         </div>
         <div className={styles.subjectWrapper}>
-          <label htmlFor="subject">Subject</label>
+          <label className={styles.label} htmlFor="subject">Subject</label>
           <input
             type="text"
             name="subject"
@@ -34,7 +34,7 @@ export default function ContactForm() {
           />
         </div>
         <div className={styles.messageWrapper}>
-          <label htmlFor="message">Message</label>
+          <label className={styles.label} htmlFor="message">Message</label>
           <textarea name="message" className={styles.message} tabIndex="4" />
         </div>
         <button className={styles.button} type='submit'>SUBMIT</button>

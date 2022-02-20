@@ -17,7 +17,7 @@ export default function Testimonials() {
         ref={carouselRef}
         enableAutoPlay={true}
         showArrows={false}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={6000}
         itemsToShow={itemsPerPage}
         onNextEnd={({ index }) => {
           if (index + 1 === totalPages) {
@@ -26,7 +26,7 @@ export default function Testimonials() {
                 if (carouselRef?.current?.goTo) {
                   carouselRef.current.goTo(0);
                 }
-              }, 3000);
+              }, 6000);
             }
           }
         }}

@@ -3,10 +3,10 @@ import { Link } from 'react-scroll'
 import styles from '../styles/Hero.module.css';
 import Youtube from './Youtube';
 
-export default function Hero() {
+export default function Hero({ref}) {
   return (
          <div className={styles.loveless}>
-        <p className={styles.logo}>loveless studio</p>
+        <p ref={ref} className={styles.logo}>loveless studio</p>
         <h1 className={styles.heroText}>MASSIVE PRODUCTIONS FROM SONG TO MASTER</h1>
         <div className={styles.textWrapperOuter}>
            <div className={styles.textWrapper}>
