@@ -28,7 +28,7 @@ top: 0px;
     rgba(0, 0, 0, 0.5) 90%,
     transparent
   );
-  /* animation-name: dropNav; */
+
   transition: 1s ease;
 }
 
@@ -46,10 +46,6 @@ top: 0px;
   mix-blend-mode: luminosity;
 }
 
-/* @keyframes dropNav {
-  0% { top: -10vh;}
-  100% {top: 0px;}
-} */
 
 .hidden {
       width: 100%;

@@ -94,8 +94,7 @@ text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
 }
 
 .cta {
-  padding: 2rem;
-position: relative;
+  padding: 2rem;@media screen and (max-width: 810px)
   color: rgb(255, 255, 255);
   background-color: transparent;
   border: 3px solid rgb(166, 78, 248);
@@ -124,4 +123,28 @@ position: relative;
   background-size: cover;
   background-repeat: repeat;
   mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 810px) {
+
+.loveless {
+  position: absolute;
+  top: 35vh;
+  left: 0px;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+}
+
+.textWrapperOuter {
+display: none;
+}
+
+
 }

@@ -8,6 +8,11 @@ gap: 1 rem;
 
 }
 
+.iframe{
+    width: 80vw;
+    height: 40vw;
+}
+
 .mapWrapper {
     filter: grayscale(1) brightness(0.9);
     
