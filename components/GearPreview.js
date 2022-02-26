@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import styles from '../styles/GearPreview.module.css';
-import Amps from '../public/assets/AmpRack.jpg';
-import LiveRoom from '../public/assets/LiveRoom-2.jpg';
+import Button from './Button';
 
 export default function GearPreview() {
   return (
     <section id='gear' className={styles.container}>
+      <h2 className={styles.h2}>Epuipped with the perfect tools for you to expermient and craft your dream sound.</h2>
       <p className={styles.text}>
-        Loveless Studio is equipped with a wide range of instruments, amplifiers,
+        Loveless Studio is kitted out with a wide range of carefully curated boutique and industry standard instruments, amplifiers,
         pedals, drums and the highest quality recording equiptment.
       </p>
-      <div className={styles.imageOneWrapper}>
+        <Button text={'CHECK OUT OUR FULL GEAR LISTING'} />
+      {/* <div className={styles.imageOneWrapper}>
         <Image
           className={styles.imageOne}
           src={LiveRoom}
@@ -26,7 +27,7 @@ export default function GearPreview() {
           alt="Loveless Studio industry standard cabinets and amplifiers"
           layout='fill'
         />
-      </div>
+      </div> */}
     </section>
   );
 }

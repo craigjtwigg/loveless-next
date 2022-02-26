@@ -24,8 +24,8 @@ export default function Content(props) {
         </div>
 
         <div className={styles.contentBottom}>
-             {/* <GearPreview />
-            <FaqPreview /> */}
+             <GearPreview />
+            <FaqPreview />
             <ContactForm />
         </div>
         {/* <div className={styles.audio}>

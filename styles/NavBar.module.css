@@ -2,20 +2,18 @@
        width: 100%;
     height: 10vh;
     
-     /* background: 
-	linear-gradient(151deg, rgba(14, 2, 14, 0.644), rgba(17, 10, 31, 0.877)),
-	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.356), rgb(36, 4, 34)),
-	url(https://grainy-gradients.vercel.app/noise.svg); */
+     background: 
+	linear-gradient(151deg, rgba(14, 2, 14, 0.192), rgba(17, 10, 31, 0.548)),
+	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.233), rgba(36, 4, 34, 0.411)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
     color: var(--brand-purple);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
     position: sticky;
-    top:0px;
     z-index: 100;
-    transition: 0.5s ease-in;
-
+top: 0px;
     mask-image: linear-gradient(
      to bottom,
     rgba(0, 0, 0, 1)70%,
@@ -23,12 +21,15 @@
     transparent
   );
 
+
   -webkit-mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1)70%,
     rgba(0, 0, 0, 0.5) 90%,
     transparent
   );
+  /* animation-name: dropNav; */
+  transition: 1s ease;
 }
 
 .active::after {
@@ -45,9 +46,14 @@
   mix-blend-mode: luminosity;
 }
 
+/* @keyframes dropNav {
+  0% { top: -10vh;}
+  100% {top: 0px;}
+} */
+
 .hidden {
       width: 100%;
-    height: 0px;
+    height: 10vh;
      background: 
 	linear-gradient(151deg, rgba(14, 2, 14, 0.644), rgba(17, 10, 31, 0.877)),
 	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.356), rgb(36, 4, 34)),
@@ -57,10 +63,12 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
+    top: -10vh;
     filter: opacity(0);
     pointer-events: none;
        
        z-index: 200;
+       transition: 1s ease;
 }
 
 .logo {

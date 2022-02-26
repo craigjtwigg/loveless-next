@@ -1,0 +1,52 @@
+.button {
+  padding: 2rem;
+position: relative;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 3px solid rgb(166, 78, 248);
+  border-radius: 50px;
+  font-family: inherit;
+  margin: 20px; mask-mode: unset;
+  transition: ease-in 0.2s;
+}
+
+.alt {
+ padding: 2rem;
+position: relative;
+  color: rgb(255, 255, 255);
+  background-color: rgb(166, 78, 248);
+  border: 3px solid rgb(166, 78, 248);
+  border-radius: 50px;
+  font-family: inherit;
+  margin: 20px; mask-mode: unset;
+  transition: ease-in 0.2s;
+cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background:rgb(158, 58, 252);
+  box-shadow: 0 3px 10px rgba(26, 25, 25, 0.5), 0 2px 10px rgba(48, 32, 54, 0.5);
+  cursor: pointer;
+}
+
+.alt:hover {
+    transform: translateY(-3px);
+    background: transparent;
+  box-shadow: 0 3px 10px rgba(26, 25, 25, 0.5), 0 2px 10px rgba(48, 32, 54, 0.5);
+  cursor: pointer;
+}
+
+.button:after, .alt:after{
+    position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+  border-radius: inherit;
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: difference;
+}

@@ -8,4 +8,8 @@
     padding: 3rem;
     text-align: center;
     gap: 2rem;
+
+    grid-area: text;
+    display: flex;
+    align-items: center;
 }

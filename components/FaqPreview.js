@@ -13,11 +13,11 @@ export default function faqPreview() {
 }
   return ( <section id='faq' className={styles.container}>
       <Map location={location} zoomLevel={17}/>
-      {
+      {/* {
           faqData.map((faq,idx) => (
               <FaqCard key={idx} question={faq.q} answer={faq.a}/>
           ))
-      }
+      } */}
   </section>
   )
 }

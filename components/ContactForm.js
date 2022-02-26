@@ -1,8 +1,14 @@
 import styles from '../styles/ContactForm.module.css';
+import Button from './Button';
 
 export default function ContactForm() {
   return (
     <section id='contact' className={styles.container}>
+      <div className={styles.textWrapper}>
+        <h2>Let&apos;s make a record together</h2>
+        <p className={styles.text}>Fill in this contact form and make your first step towards bringing your next project to life, Matt will be back in touch with you ASAP.</p>
+      </div>
+      
       <form className={styles.form}>
         <div className={styles.nameEmailWrapper}>
           <div className={styles.nameWrapper}>
@@ -37,7 +43,7 @@ export default function ContactForm() {
           <label className={styles.label} htmlFor="message">Message</label>
           <textarea name="message" className={styles.message} tabIndex="4" />
         </div>
-        <button className={styles.button} type='submit'>SUBMIT</button>
+        <Button text={'SEND YOUR MESSAGE'} />
       </form>
     </section>
   );

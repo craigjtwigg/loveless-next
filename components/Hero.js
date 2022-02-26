@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-scroll'
 import styles from '../styles/Hero.module.css';
 import Youtube from './Youtube';
+import Button from './Button';
 
 export default function Hero({ref}) {
   return (
@@ -16,7 +17,7 @@ export default function Hero({ref}) {
         </div>
      
          <Link to='contact' spy={true} smooth={true}>
-            <button className={styles.cta}>DISCUSS YOUR DREAM PROJECT</button>
+             <Button text={'DISCUSS YOUR DREAM PROJECT'} />
          </Link>
       
       </div>

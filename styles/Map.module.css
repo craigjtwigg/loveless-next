@@ -1,7 +1,46 @@
 .map{
+
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 1 rem;
+
+}
+
+.mapWrapper {
+    filter: grayscale(1) brightness(0.9);
+    
+}
+
+.mapWrapper:hover {
+    filter: grayscale(0);
+}
+
+.mapWrapper::after{
+position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs01.gif');
+  opacity: 0.5;
+  background-size:auto;
+  background-repeat: repeat;
+mix-blend-mode: difference;
+pointer-events: none;
+ box-shadow: 4px 4px 5px pink;
+}
+
+.text {
+
+    background-color: var(--main-bg);
+  background: linear-gradient(151deg, #eba4bfbd, #bf9de086),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(136, 115, 185, 0.733)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
 }
