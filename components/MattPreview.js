@@ -17,7 +17,7 @@ export default function MattPreview() {
        
      </div>
       <div className={styles.mattContent}>
-<h2>Hi my name is Matt Heap.</h2> 
+<h2 className={styles.title}>Hi my name is Matt Heap.</h2> 
     <p className={styles.text}>
           I am the owner, producer and mix engineer at Lovess Studio with over a decade of experience recording music across multiple genres
       from metalcore through to folk music, pop to shoegaze and everything in

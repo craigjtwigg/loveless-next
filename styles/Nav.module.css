@@ -1,4 +1,4 @@
-/* .navWrapper {
+.navWrapper {
     
     z-index: 2;
     height: 20vh;
@@ -15,4 +15,10 @@
     gap: 2rem;
  
 }
- */
+
+@media screen and (max-width: 810px) {
+
+    .nav {
+        display: none;
+    }
+}

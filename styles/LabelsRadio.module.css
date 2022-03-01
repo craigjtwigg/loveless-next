@@ -1,4 +1,4 @@
-/* .container {
+.container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -17,4 +17,30 @@
     filter: invert(1) brightness(0.9);
     height: 100%;
     mix-blend-mode: color-dodge;
-} */
+}
+
+/* 
+mobile view */
+@media screen and (max-width: 810px) {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.logoWrapper {
+
+    width: 20vw;
+    position: relative;
+    margin: 2vw;
+}
+
+.logo {
+    filter: invert(1) brightness(0.9);
+    height: 100%;
+    mix-blend-mode: color-dodge;
+}
+}

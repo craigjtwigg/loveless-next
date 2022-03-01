@@ -1,4 +1,4 @@
-.button {
+.alt {
   padding: 2rem;
 position: relative;
   color: rgb(255, 255, 255);
@@ -10,7 +10,7 @@ position: relative;
   transition: ease-in 0.2s;
 }
 
-.alt {
+.button {
  padding: 2rem;
 position: relative;
   color: rgb(255, 255, 255);
@@ -49,4 +49,12 @@ cursor: pointer;
   background-size: cover;
   background-repeat: repeat;
   mix-blend-mode: difference;
+}
+
+@media screen and (max-width: 810px)  {
+  .button, .alt {
+    transform: scale(0.8);
+    padding: 1.3rem;
+    margin: 0px;
+  }
 }

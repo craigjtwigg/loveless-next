@@ -7,6 +7,7 @@
   /* --brand-pink: #FF82B1; */
   --brand-pink: white;
   --brand-hot-pink: #A649A2;
+  --phone-breakpoint: 810px;
 }
 
 html,
