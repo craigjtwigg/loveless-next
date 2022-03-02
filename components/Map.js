@@ -5,7 +5,7 @@ export default function Map() {
     <div className={styles.map}>
         <div className={styles.where}>
             <h2 className={styles.h2}>Where is Loveless Studio?</h2>
-            <p className={styles.text}>On Greenfield Road in loveley Colne, Lancashire! BB8 9PE</p>
+            <p className={styles.text}>On Greenfield Road in loveley Colne, Lancashire! BB8 9PE - easily accessible from Manchester and Liverpool.</p>
         </div>
         <div className={styles.mapWrapper}>
            <iframe

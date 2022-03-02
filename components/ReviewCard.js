@@ -23,7 +23,7 @@ export default function Review(props) {
         ))}
       </div>
       <div className={styles.reviewAuthor}>
-        <p>{props.author}</p>
+      {props.author}
       </div>
       <div className={styles.reviewContent}>
         {' '}

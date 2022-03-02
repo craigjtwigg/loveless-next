@@ -45,3 +45,11 @@ p {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 810px) {
+p{
+  font-size: 1.3rem;
+}
+h2{
+  font-size: 2.5rem;
+}
+}

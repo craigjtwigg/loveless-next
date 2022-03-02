@@ -11,6 +11,8 @@
     
 }
 
+
+
 .contentTop::after{
     position: absolute;
   height: 100%;
@@ -50,4 +52,14 @@ display: flex;
 justify-content: center;
     bottom: 0px;
     z-index: 100;
+}
+
+@media screen and (max-width: 810px) {
+    .contentTop {
+        padding-bottom: 0px;
+    }
+
+    .contentBottom {
+        padding-top: 0px;
+    }
 }
