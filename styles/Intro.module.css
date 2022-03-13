@@ -16,12 +16,13 @@
 
 @media screen and (max-width: 810px) {
   .container {
-    justify-content: flex-end;
-    height: 90vh;
+    
+    max-height: 90vh;
     position: relative;
+    
   }
 
   .text {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }

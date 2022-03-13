@@ -46,6 +46,7 @@ mobile view */
     display: flex;
     width: 100%;
     margin: 0 auto;
+    padding-top: 4rem;
 }
 
 .section {
@@ -61,8 +62,8 @@ mobile view */
 
 .sectionTitle {
     font-size: 2.5rem;
-    padding: 0;
-    margin: 0px;
+    width: 95%;
+    margin: 0px auto;
     justify-self: center;
     color: white;
     mix-blend-mode: color-dodge;

@@ -1,3 +1,5 @@
+
+@media screen and (min-width: 810px) {
 .reviewContainer {
   position: relative;
   display: grid;
@@ -118,6 +120,7 @@ height: 100%;
     filter: invert(1) brightness(0.9);
     mix-blend-mode: color-dodge;
 }
+}
 
 /* 
 mobile view */
@@ -200,24 +203,22 @@ height: 100%;
 }
 
 .reviewAuthor {
+  position: relative;
+  bottom: 5vh;;
   grid-area: author;
     display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   font-size: 1.3rem;
-  background-color: var(--main-bg);
-  background: linear-gradient(151deg, #ff82b26e, #6c439448),
-    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+color: white;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
 
 .reviewContent {
+  position: relative;
+  bottom: 8vh;
   grid-area: content;
   display: flex;
   justify-content: center;
@@ -225,23 +226,19 @@ height: 100%;
   align-items: center;
   font-size: 1.3rem;
   padding: 2rem;
-  background-color: var(--main-bg);
-  background: linear-gradient(151deg, #ff82b26e, #6c439448),
-    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #f3cbdabd;
   line-height: 1.4;
   
 }
 
 .stars {
+  position: relative;
+  bottom: 8vh;
     grid-area: stars;
     display: flex;
     justify-self: center;
     width: 60%;
-    filter: invert(1) brightness(0.9);
+    filter: invert(1) ;
     mix-blend-mode: color-dodge;
 }
 }

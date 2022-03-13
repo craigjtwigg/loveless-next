@@ -1,4 +1,4 @@
-/* .container {
+.container {
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -90,7 +90,7 @@ background: linear-gradient(151deg, #ff82b26e, #8a59bb48),
 .email:focus, .name:focus, .message:focus, .subject:focus {
      border: solid 5px pink;
      outline:none;
-} */
+}
 
 /* 
 mobile view */
