@@ -30,15 +30,24 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h1, h2 {
       font-size: 3rem;
     color: white;
     mix-blend-mode: color-dodge;
-    filter: brightness(0.9);
+    filter: brightness(0.93);
 }
 
-p {
+
+
+
+p, h3 {
   font-size: 2rem;
+  color: #f3cbdabd;
+}
+
+h1::selection, h2::selection, h3::selection, a::selection, p::selection {
+  background: var(--brand-purple);
+  color: white;
 }
 
 * {

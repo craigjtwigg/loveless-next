@@ -1,11 +1,41 @@
 import styles from '../styles/Gear.module.css';
+import { gearData } from '../data';
+import { useInView } from 'react-intersection-observer'
+import NavBar from '../components/NavBar';
+import GearCategory from '../components/GearCategory';
+import AmpRack from '../public/assets/AmpRack.jpg'
+import Image from 'next/image';
 
 export default function Gear() {
+  const { ref, inView } = useInView({
+     threshold: 0.2,
+   });
 
   return (
+    <>
+    <NavBar inView={inView}/>
+ 
     <div className={styles.container}>
+         <>
+        <div className={styles.header}>
+          <Image className={styles.headerImage} src={AmpRack} alt='Industry standard equipment at Loveless Studio' />
+          </div>
+          <div className={styles.hero}>
+            <h1 className={styles.title}>We have everything here to bring your music to life</h1>
+            <p className={styles.text}> Loveless Studio is kitted out with a wide range of carefully curated boutique and industry standard instruments, amplifiers,
+        pedals, drums and the highest quality recording equiptment.</p>
+            </div>
+          </>
+<GearCategory category='guitar' />
+<GearCategory category='pedal' />
+<GearCategory category='amp' />
+<GearCategory category='drums' />
+<GearCategory category='microphones' />
+<GearCategory category='monitoring' />
+<GearCategory category='outboard & i/o' />
 
-Guitars
+
+{/* Guitars
 
  
 
@@ -230,9 +260,10 @@ Cranbourne Audio Camden pre-amp
 
 SSL 611 EQ
 
-DBX 560 compressor
+DBX 560 compressor */}
 
       </div>
+      </>
   );
 }
 

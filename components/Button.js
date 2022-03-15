@@ -1,7 +1,7 @@
 import styles from '../styles/Button.module.css'
 
-export default function Button({text, alternate}) {
+export default function Button({text, alternate, small}) {
   return (
-    <button className={alternate ? styles.alt : styles.button}>{text}</button>
+    <button className={small ? styles.small : alternate ? styles.alt : styles.button}>{text}</button>
   )
 }

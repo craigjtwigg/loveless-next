@@ -1,0 +1,32 @@
+.container {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.video {
+    height: 60vh;
+    
+}
+
+
+.visible {
+    height: 80vh;
+     transition: 1s ease;
+     filter: opacity(1);
+}
+
+.hidden {
+    height: 0px;
+    overflow: hidden;
+    filter: opacity(0);
+    transition: 1s ease;
+}
