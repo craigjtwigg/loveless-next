@@ -28,7 +28,7 @@
     );
 }
 
-.reviewContainer::after {
+/* .reviewContainer::after {
     position: absolute;
   height: 100%;
   width: 100%;
@@ -40,7 +40,7 @@
   background-size: cover;
   background-repeat: repeat;
   mix-blend-mode: lighten;
-}
+} */
 
 .imgWrapper::after{
 position: absolute;
@@ -51,7 +51,7 @@ position: absolute;
   content: ' ';
   background-image: url('../public/assets/vhs01.gif');
   opacity: 0.5;
-  background-size: cover;
+  background-size:auto;
   background-repeat: repeat;
  
 }
@@ -60,7 +60,7 @@ position: absolute;
   object-fit: cover;
  
   position: absolute;
-  filter: grayscale(1) brightness(1.1) contrast(1.5) ;
+  filter: grayscale(1) brightness(1) contrast(1.9) ;
 }
 
 .imgWrapper {
@@ -143,8 +143,8 @@ mobile view */
   
   overflow: scroll;
     
-    border-radius: 10px;
-     mix-blend-mode: exclusion;
+   
+     mix-blend-mode: normal;
     mask-image: linear-gradient(
     to bottom,
     transparent 1%,
@@ -154,7 +154,7 @@ mobile view */
     );
 }
 
-.reviewContainer::after {
+/* .reviewContainer::after {
     position: absolute;
   height: 100%;
   width: 100%;
@@ -166,7 +166,7 @@ mobile view */
   background-size: cover;
   background-repeat: repeat;
   mix-blend-mode: lighten;
-}
+} */
 
 .imgWrapper::after{
 position: absolute;
@@ -186,7 +186,7 @@ position: absolute;
   object-fit: cover;
  object-position: top;
   position: absolute;
-  filter: grayscale(1) brightness(1.1) contrast(1.5) ;
+  filter: grayscale(1) brightness(1) contrast(1.8) ;
 }
 
 .imgWrapper {
@@ -198,8 +198,7 @@ height: 100%;
   mask-image: linear-gradient(
     to top,
     transparent 1%,
-    rgba(0, 0, 0, 1) 98%,
-    transparent 98%);
+    rgba(0, 0, 0, 1) 98%);
 }
 
 .reviewAuthor {

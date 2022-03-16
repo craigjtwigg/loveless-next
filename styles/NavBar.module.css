@@ -44,6 +44,7 @@ top: 0px;
   background-size: cover;
   background-repeat: repeat;
   mix-blend-mode: luminosity;
+  pointer-events: none;
 }
 
 

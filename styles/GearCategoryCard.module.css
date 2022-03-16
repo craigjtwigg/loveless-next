@@ -46,3 +46,19 @@
     align-content: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 810px)  {
+    .container {
+    padding: 0px 0.2rem;
+    width: 25vw;
+    height: 10vh;
+    }
+
+    .title {
+        font-size: 0.7rem;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+}

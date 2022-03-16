@@ -14,6 +14,11 @@ export default function Gear() {
     threshold: 0.2,
   });
 
+  const breakPoints = [
+    {width: 1, itemsToShow: 2},
+    {width: 810, itemsToShow: 4}
+  ]
+
   const itemsPerPage = 4;
 
   const carouselRef = useRef(null);
@@ -49,11 +54,12 @@ export default function Gear() {
             </p>
             <div className={styles.cards}>
               <Carousel
+              breakPoints={breakPoints}
                 ref={carouselRef}
                 enableAutoPlay={false}
                 showArrows={true}
                 autoPlaySpeed={6000}
-                itemsToShow={itemsPerPage}
+                
                 onNextEnd={({ index }) => {
                   if (index + 1 === totalPages) {
                     if (carouselRef?.current?.goTo) {

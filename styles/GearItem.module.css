@@ -16,7 +16,9 @@
     gap: 2rem;
 }
 
-
+.text {
+    margin: auto;
+}
 
 .video {
     height: 60vh;
@@ -25,6 +27,9 @@
 
 
 .visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 80vh;
     width: 90vw;
      transition: 1s ease;
@@ -36,5 +41,15 @@
     height: 0px;
     overflow: hidden;
     filter: opacity(0);
-    transition: 1s ease;
+    transition: filter 0.5s ease-out, height 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 810px) {
+.video {
+    height: 30vh;
+}
+
+.visible {
+    height: 50vh;
+}
 }

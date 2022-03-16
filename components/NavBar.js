@@ -1,29 +1,22 @@
-import styles from '../styles/NavBar.module.css'
-import { useState, useEffect } from 'react'
-import Nav from './Nav'
+import styles from '../styles/NavBar.module.css';
+import Link from 'next/link';
+import Nav from './Nav';
 
-export default function NavBar({inView}) {
-//      const [show, setShow] = useState(false)
-//   const controlNavbar = () => {
-//       if (window.scrollY > 650 ) {
-//           setShow(true)
-//       }else{
-//         setShow(false)
-//       }
-//       console.log('hello')
-//   }
+export default function NavBar({ inView }) {
 
-//   useEffect(() => {
-//       window.addEventListener('scroll', controlNavbar)
-//       return () => {
-//           window.removeEventListener('scroll', controlNavbar)
-//       }
-//   }, [])
-
-  const active = styles.active
-  const hidden = styles.hidden
+  const active = styles.active;
+  const hidden = styles.hidden;
 
   return (
-    <div className={!inView ? `${active}` : `${hidden}`}><div className={styles.logo}>loveless studio</div><Nav /></div>
-  )
+    <div className={!inView ? `${active}` : `${hidden}`}>
+      <div className={styles.logo}>
+        {' '}
+        <Link href="/">
+          <a>loveless studio</a>
+        </Link>
+      </div>
+
+      <Nav />
+    </div>
+  );
 }
