@@ -29,25 +29,25 @@ export const gearData = [
     category: 'amp',
     name: 'Marshall JCM800 (Head)',
     description: 'Classic Marshall JCM800 head!.',
-    video: 'https://youtu.be/zOTrBqRNq_I'
+    video: 'zOTrBqRNq_I'
   },
     {
     category: 'pedal',
     name: 'ZVex Fuzz Factory',
     description: 'A wild boutique fuzz pedal with a wide variety of glitchy, rippping tones!',
-    video: 'https://youtu.be/sIrf8M2AkWs'
+    video: 'sIrf8M2AkWs'
   },
       {
     category: 'pedal',
     name: 'Strymon Big Sky',
     description: 'An  incredibly versitile reverb machine with super fine control.',
-    video: 'https://youtu.be/Z-6k1umVc04'
+    video: 'Z-6k1umVc04'
   },
   {
     category: 'drums',
     name: 'Mapex Black Panther Snare',
     description: 'A high-performance, 14x6" maple snare with excellent articulation and crisp attack.',
-    video: 'https://youtu.be/x-cvZ5pkdMk'
+    video: 'x-cvZ5pkdMk'
   },
    {
     category: 'drums',
@@ -59,13 +59,13 @@ export const gearData = [
     category: 'microphones',
     name:'Shure SM58',
     description: 'The iundustry standard microphone! We have 2 SM58s here at Lovelesss.',
-    video: 'https://youtu.be/pNAVavFzI0E'
+    video: 'pNAVavFzI0E'
   }, 
 {
     category: 'microphones',
     name:'AKG C414 XLS',
     description: 'A top tier condenser mic from AKG - We have 2 here at Lovelesss.',
-    video: 'https://youtu.be/WuIH8cjq_NM'
+    video: 'WuIH8cjq_NM'
   }, 
 {
   category: 'monitoring',

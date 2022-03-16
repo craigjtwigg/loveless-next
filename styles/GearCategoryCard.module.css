@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    display: block;
+    border: solid var(--brand-purple) 2px;
+    border-radius: 10px;
+    padding: 0px 1rem;
+    width: 19vw;
+    height: 15vh;
+    transition: 0.3s ease;
+}
+
+.container:hover {
+    border: solid thistle 2px;
+     
+    
+  box-shadow: 0 3px 10px rgba(26, 25, 25, 0.5), 0 2px 10px rgba(48, 32, 54, 0.5);
+  cursor: pointer;
+}
+
+.container::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/guitars-1.jpg');
+  opacity: 0.5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  mix-blend-mode: lighten;
+  filter: grayscale(1) contrast(1.5) brightness(0.4);
+}
+
+.title {
+    font-size: 2rem;
+    align-self: center;
+    margin: 0px;
+    mix-blend-mode: normal;
+}
+
+.flex {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}

@@ -14,17 +14,19 @@
 
 .video {
     height: 60vh;
-    
+    padding: 0 10%;
 }
 
 
 .visible {
     height: 80vh;
+    width: 90vw;
      transition: 1s ease;
      filter: opacity(1);
 }
 
 .hidden {
+    width: 90vw;
     height: 0px;
     overflow: hidden;
     filter: opacity(0);
