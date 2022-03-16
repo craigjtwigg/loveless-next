@@ -1,4 +1,17 @@
-.container {
-   
+.container, .alt {
+   padding: 3rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.alt {
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.title {
+    font-size: 9rem;
+    padding: 0px 0px 2rem 0px;
+    margin: 0px;
 }

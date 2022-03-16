@@ -5,40 +5,40 @@ import reviewImg04 from './public/assets/reviewimage04.jpg';
 
 export const gearData = [
   {
-    category: 'guitar',
+    category: 'guitars & basses',
     name: 'Fender Jaguar',
     description: 'Mexican made Fender Jaguar with a double humbucking configuration - fitted with a set of Bareknuckle Pickups.',
   },
   {
-    category: 'guitar',
+    category: 'guitars & basses',
     name: 'Fender Mustang',
     description: 'Mexican made Fender Mustang fitted with a Serymour Duncan Hot Rails pickup in the bridge position.'
   },
   {
-    category: 'guitar',
+    category: 'guitars & basses',
     name: 'Fender Jazz Bass',
     description: 'Mexican Fender Jazz bass fitted with Seymour Duncan Quarter Pounder pickups'
   },
   {
-    category: 'amp',
+    category: 'amps & cabs',
     name: 'Vox AC30',
     description: '2x12 Vox AC30 combo amp, perfect for glorious clean tones.',
     video: 'n8M6VjhCZ1c'
   },
     {
-    category: 'amp',
+    category: 'amps & cabs',
     name: 'Marshall JCM800 (Head)',
     description: 'Classic Marshall JCM800 head!.',
     video: 'zOTrBqRNq_I'
   },
     {
-    category: 'pedal',
+    category: 'pedals',
     name: 'ZVex Fuzz Factory',
     description: 'A wild boutique fuzz pedal with a wide variety of glitchy, rippping tones!',
     video: 'sIrf8M2AkWs'
   },
       {
-    category: 'pedal',
+    category: 'pedals',
     name: 'Strymon Big Sky',
     description: 'An  incredibly versitile reverb machine with super fine control.',
     video: 'Z-6k1umVc04'

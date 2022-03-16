@@ -7,14 +7,14 @@ import GearCategoryCard from '../components/GearCategoryCard';
 import AmpRack from '../public/assets/AmpRack.jpg';
 import Image from 'next/image';
 import Carousel from 'react-elastic-carousel';
-import { useRef } from 'react'
+import { useRef } from 'react';
 
 export default function Gear() {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
 
-   const itemsPerPage = 4;
+  const itemsPerPage = 4;
 
   const carouselRef = useRef(null);
   const totalPages = Math.ceil(7 / itemsPerPage);
@@ -47,47 +47,45 @@ export default function Gear() {
               curated boutique and industry standard instruments, amplifiers,
               pedals, drums and the highest quality recording equiptment.
             </p>
- <div className={styles.cards}>
-<Carousel
-        ref={carouselRef}
-        enableAutoPlay={false}
-        showArrows={true}
-        autoPlaySpeed={6000}
-        itemsToShow={itemsPerPage}
-        onNextEnd={({ index }) => {
-          if (index + 1 === totalPages) {
-            if (carouselRef?.current?.goTo) {
-              resetTimeout = setTimeout(() => {
-                if (carouselRef?.current?.goTo) {
-                  carouselRef.current.goTo(0);
-                }
-              }, 6000);
-            }
-          }
-        }}
-      >
-
-           
-              <GearCategoryCard category='guitars & basses'/>
-              <GearCategoryCard category='pedals'/>
-              <GearCategoryCard category='amps & cabs'/>
-              <GearCategoryCard category='drums'/>
-              <GearCategoryCard category='microphones'/>
-              <GearCategoryCard category='monitoring'/>
-              <GearCategoryCard category='outboard & i/o'/>
-              
+            <div className={styles.cards}>
+              <Carousel
+                ref={carouselRef}
+                enableAutoPlay={false}
+                showArrows={true}
+                autoPlaySpeed={6000}
+                itemsToShow={itemsPerPage}
+                onNextEnd={({ index }) => {
+                  if (index + 1 === totalPages) {
+                    if (carouselRef?.current?.goTo) {
+                      resetTimeout = setTimeout(() => {
+                        if (carouselRef?.current?.goTo) {
+                          carouselRef.current.goTo(0);
+                        }
+                      }, 6000);
+                    }
+                  }
+                }}
+              >
+                <GearCategoryCard category="guitars & basses" />
+                <GearCategoryCard category="pedals" />
+                <GearCategoryCard category="amps & cabs" />
+                <GearCategoryCard category="drums" />
+                <GearCategoryCard category="microphones" />
+                <GearCategoryCard category="monitoring" />
+                <GearCategoryCard category="outboard & i/o" />
               </Carousel>
             </div>
           </div>
         </>
-        <GearCategory category="guitar" />
-        <GearCategory category="pedal" />
-        <GearCategory category="amp" />
-        <GearCategory category="drums" />
+        <div className={styles.listContainer}>
+        <GearCategory category="guitars & basses" />
+        <GearCategory category="pedals" alt={true}/>
+        <GearCategory category="amps & cabs" />
+        <GearCategory category="drums" alt={true}/>
         <GearCategory category="microphones" />
-        <GearCategory category="monitoring" />
+        <GearCategory category="monitoring" alt={true}/>
         <GearCategory category="outboard & i/o" />
-
+</div>
         {/* Guitars
 
  

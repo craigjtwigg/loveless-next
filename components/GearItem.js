@@ -13,8 +13,8 @@ export default function GearItem(props) {
   return (
     <div className={styles.container}>
       <div className={styles.titleWrapper}>
-        <h3>{props.item.name}</h3>
-        <div className={styles.detailsBtn} onClick={() => toggleActive()}><Button small={true} text={isActive ? '-' : 'details'}  /></div>
+        <h3 className={styles.title}>{props.item.name}</h3>
+        <div className={styles.detailsBtn} onClick={() => toggleActive()}><Button small={true} text={isActive ? 'hide details' : 'show details'}  /></div>
         
       </div>
 

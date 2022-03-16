@@ -6,12 +6,12 @@
     padding: 0px 1rem;
     width: 19vw;
     height: 15vh;
-    transition: 0.3s ease;
+    transition: 0.1s ease;
 }
 
 .container:hover {
     border: solid thistle 2px;
-     
+     background-image: url('../public/assets/vhs01.gif');
     
   box-shadow: 0 3px 10px rgba(26, 25, 25, 0.5), 0 2px 10px rgba(48, 32, 54, 0.5);
   cursor: pointer;

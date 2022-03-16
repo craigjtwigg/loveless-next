@@ -17,9 +17,9 @@ export default function GearCategory(props) {
       ? 'amps & cabs'
       : props.category;
   return (
-    <div className={styles.container}>
+    <div id={props.category} className={props.alt ? styles.alt : styles.container}>
 
-      <h2>{categoryTitle}</h2>
+      <h2 className={styles.title}>{categoryTitle}</h2>
       {categoryData.map((item, idx) => (
        <GearItem key={idx} item={item}/>
       ))}
