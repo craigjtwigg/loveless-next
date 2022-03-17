@@ -1,0 +1,48 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 9rem;
+    margin: 0px;
+}
+
+.text {
+   
+    padding-bottom: 2rem;
+        font-size: 2rem;
+    background-color: var(--main-bg);
+  background: linear-gradient(151deg, #fa8cabd3, #cda7eba4),
+    radial-gradient(circle at 40% 124%, rgb(64, 28, 148), rgba(169, 34, 247, 0.541)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.return {
+    
+      background-color: var(--main-bg);
+  background: linear-gradient(151deg, #ff82b26e, #8a59bb48),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
+}
+
+.return:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(151deg, #ffffff6e, #9b9b9b48),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(247, 180, 180, 0)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
+}

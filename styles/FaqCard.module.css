@@ -3,19 +3,43 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.459);
+    padding: 2rem;
 }
 
 .questionWrapper {
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    font-size: 2rem;
+    background-color: var(--main-bg);
+  background: linear-gradient(151deg, #fa8cabd3, #cda7eba4),
+    radial-gradient(circle at 40% 124%, rgb(64, 28, 148), rgba(169, 34, 247, 0.541)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .answer {
-    height: auto;
+    color: rgba(255, 255, 255, 0.795);
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 2rem ;
+    height: fit-content;
+    transition: 15ms;
 }
 
 .hidden {
+    color: rgba(255, 255, 255, 0);
     height: 0px;
     overflow: hidden;
+    transition: 2ms;
+    font-size: 1.8rem;
+    text-align: center;
 }
 

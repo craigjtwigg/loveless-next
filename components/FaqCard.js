@@ -1,5 +1,6 @@
 import styles from '../styles/FaqCard.module.css';
 import { useState } from 'react';
+import Button from './Button';
 
 export default function FaqCard(props) {
   const [isActive, setIsActive] = useState(false)
@@ -14,9 +15,9 @@ export default function FaqCard(props) {
         <div className={styles.question}>
            {props.question}
         </div>
-        <button onClick={() => toggleActive()}>
-          {isActive ? '-' : '+'}
-          </button>
+        <div className={styles.buttonWrapper} onClick={()=> toggleActive()}>
+        <Button  small={true} text={!isActive ? 'see answer' : 'hide answer'}  />
+        </div>
         </div>
       <div className={isActive ? styles.answer : styles.hidden}>{props.answer}</div>
     </div>

@@ -1,12 +1,12 @@
 import styles from '../styles/ContactForm.module.css';
 import Button from './Button';
 
-export default function ContactForm() {
+export default function ContactForm(props) {
   return (
     <section id='contact' className={styles.container}>
       <div className={styles.textWrapper}>
-        <h2>Let&apos;s make a record together</h2>
-        <p className={styles.text}>Fill in this contact form and make your first step towards bringing your next project to life, Matt will be back in touch with you ASAP.</p>
+        <h2>{props.faq ? ('Did you have a different question for Matt?') : (`Let's make a record together`)}</h2>
+        <p className={styles.text}>{props.faq ? (`Get intouch below and Matt will answer ASAP!`) : (`Fill in this contact form and make your first step towards bringing your next project to life, Matt will be back in touch with you ASAP.`) }</p>
       </div>
       
       <form className={styles.form}>

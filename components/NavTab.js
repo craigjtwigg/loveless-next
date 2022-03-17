@@ -7,7 +7,7 @@ export default function NavTab({section}) {
     return (<>
      <Link href={`/${section}`}>
                     <div className={styles.tab} style={{borderRadius: section === 'showreel'? '50px 0 0 50px' : section === 'faq'? '0 50px 50px 0' : null}}>
-            <a><p>{section}</p></a>
+            <a><p className={styles.section}>{section}</p></a>
         </div>
     
         </Link>
