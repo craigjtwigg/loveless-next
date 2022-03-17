@@ -3,6 +3,8 @@ import reviewImg02 from './public/assets/reviewimage02.jpg';
 import reviewImg03 from './public/assets/reviewimage03.jpg';
 import reviewImg04 from './public/assets/reviewimage04.jpg';
 
+export const addGoogleReview = 'https://search.google.com/local/writereview?placeid=ChIJRfrUGVWSe0gR_H_eIsd_5DI'
+
 export const faqData = [
   {
     question: 'Where are you based?',
