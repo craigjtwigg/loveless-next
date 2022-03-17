@@ -7,13 +7,32 @@
 }
 
 .alt {
-    background-color: rgba(0, 0, 0, 0.425);
+    background-color: rgba(0, 0, 0, 0.233);
+     mask-image: linear-gradient(
+    to top,
+    transparent,
+    rgba(177, 177, 177, 0.8) 5%,
+    rgb(255, 255, 255) 15%,
+    rgb(255, 255, 255) 85%,
+    rgba(173, 173, 173, 0.8) 95%,
+    transparent)
+  ;
+
+  -webkit-mask-image: linear-gradient(
+    to top,
+    transparent,
+    rgba(177, 177, 177, 0.8) 5%,
+    rgb(255, 255, 255) 15%,
+    rgb(255, 255, 255) 85%,
+    rgba(173, 173, 173, 0.8) 95%,
+    transparent)
 }
 
 .title {
     font-size: 9rem;
     padding: 0px 0px 2rem 0px;
     margin: 0px;
+    mix-blend-mode: normal;
 }
 
 @media screen and (max-width: 810px) {
