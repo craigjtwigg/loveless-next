@@ -1,0 +1,27 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 9rem;
+}
+
+.testimonials {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.divider {
+    height: 0.2rem;
+    filter: opacity(0.5);
+    background-color: var(--brand-purple);
+    width: 45%;
+    margin: auto;
+    border-radius: 2px;
+}

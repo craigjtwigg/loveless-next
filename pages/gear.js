@@ -11,11 +11,11 @@ import { useRef } from 'react';
 
 export default function Gear() {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.5,
   });
 
   const breakPoints = [
-    {width: 1, itemsToShow: 2},
+    {width: 1, itemsToShow: 1},
     {width: 810, itemsToShow: 4}
   ]
 
