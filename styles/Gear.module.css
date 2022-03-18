@@ -75,3 +75,14 @@
   flex-wrap: wrap;
 
 }
+
+@media screen and (max-width: 810px) {
+
+.cards{
+  margin: 3rem 0px;
+}  
+
+.listContainer {
+  margin-top: 7rem;
+}
+}

@@ -19,6 +19,7 @@
 @media screen and (max-width: 810px) {
 
     .nav {
-        display: none;
+        flex-direction: column;
+        gap:3rem;
     }
 }

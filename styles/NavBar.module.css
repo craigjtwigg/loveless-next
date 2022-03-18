@@ -82,3 +82,26 @@ top: 0px;
   mask-mode: unset;
 text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
 }
+
+.mobileNavToggle {
+  display: none;
+}
+
+
+@media screen and (max-width: 810px) {
+
+    .desktopNav {
+        display: none;
+    }
+
+    .mobileNavToggle {
+      display: block;
+      cursor: pointer;
+    }
+
+    .icon {
+      filter: opacity(0.9);
+      mix-blend-mode: hard-light;
+
+    }
+}

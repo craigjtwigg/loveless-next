@@ -50,12 +50,12 @@
 @media screen and (max-width: 810px)  {
     .container {
     padding: 0px 0.2rem;
-    width: 25vw;
-    height: 10vh;
+    width: 50vw;
+    height: 20vh;
     }
 
     .title {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .flex {

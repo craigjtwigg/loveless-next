@@ -23,3 +23,33 @@
 .section:hover {
     color: white;
 }
+
+@media screen and (max-width: 810px) {
+    .section{
+        font-size: 2rem;
+        background-color: var(--main-bg);
+  background: linear-gradient(151deg, #eec4d073, #e1c8f3e0),
+    radial-gradient(circle at 40% 124%, rgb(64, 28, 148), rgba(169, 34, 247, 0.541)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.678);
+  mask-mode: unset;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
+    }
+    
+    .section:hover {
+        background: linear-gradient(151deg, #fff6f8d3, #ffffffe0),
+    radial-gradient(circle at 40% 124%, rgb(64, 28, 148), rgba(169, 34, 247, 0.541)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.678);
+  mask-mode: unset;
+text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
+    }
+}

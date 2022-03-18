@@ -1,0 +1,73 @@
+.container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vh;
+    top: 5vh;
+    left: 0px;
+    min-height: 100%;
+    width: 100%;
+    z-index: 3;
+    background: 
+	linear-gradient(151deg, rgba(14, 2, 14, 0.192), rgba(17, 10, 31, 0.548)),
+	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.925), rgba(36, 4, 34, 0.658)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+    color: var(--brand-purple);
+top: 0px;
+
+
+  transition: 0.4s ease;
+}
+
+.container::after {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: ' ';
+  background-image: url('../public/assets/vhs02.gif');
+  background-position: -30rem;
+  filter: opacity(0.9) brightness(0.9);
+  background-size: cover;
+  background-repeat: repeat;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+}
+
+.hidden {
+       position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20vh;
+    top: 5vh;
+    left: 0px;
+    min-height: 100%;
+    width: 100%;
+    z-index: 3;
+    background: 
+	linear-gradient(151deg, rgba(14, 2, 14, 0.192), rgba(17, 10, 31, 0.548)),
+	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.925), rgba(36, 4, 34, 0.658)),
+	url(https://grainy-gradients.vercel.app/noise.svg);
+    color: var(--brand-purple);
+    transform: translateY(-100vh);
+    filter: opacity(0);
+        mask-image: linear-gradient(
+     to bottom,
+    rgba(0, 0, 0, 1)70%,
+    rgba(0, 0, 0, 0.5) 90%,
+    transparent
+  );
+
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1)70%,
+    rgba(0, 0, 0, 0.5) 90%,
+    transparent
+  );
+
+  transition: 0.4s ease;
+}
