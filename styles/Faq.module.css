@@ -9,6 +9,7 @@
 .title {
     font-size: 9rem;
     margin: 2rem;
+    mix-blend-mode: normal;
 }
 
 .faqContainer {

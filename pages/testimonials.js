@@ -18,9 +18,7 @@ export default function Testimonials() {
         <p className={styles.text}>
        As a producer delivering unique recordings that meet the needs and tastes of each artist is the top priority - please take a moment to read what some of my clients have had to say about their experiences at the studio.
             </p>
-            <p className={styles.google}>
-                Have you made a record here at Loveless Studio? <Link href={addGoogleReview}><a className={styles.a}>Tell people  about the session on Google.</a></Link>
-                </p>
+          
         <div className={styles.testimonials}>
          {reviewData.map((review, idx) => (
              <>
@@ -34,6 +32,9 @@ export default function Testimonials() {
          <div className={styles.divider}></div>
          </>))}
          </div>
+           <p className={styles.google}>
+                Have you made a record here at Loveless Studio??<br /><Link href={addGoogleReview}><a className={styles.a}>Tell people  about the session on Google.</a></Link>
+                </p>
         </div></>
 
   )
