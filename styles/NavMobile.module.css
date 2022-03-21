@@ -8,7 +8,7 @@
     left: 0px;
     min-height: 100%;
     width: 100%;
-    z-index: 3;
+    z-index: 100;
     background: 
 	linear-gradient(151deg, rgba(14, 2, 14, 0.192), rgba(17, 10, 31, 0.548)),
 	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.925), rgba(36, 4, 34, 0.658)),

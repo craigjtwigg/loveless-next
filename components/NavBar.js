@@ -10,6 +10,7 @@ import Image from 'next/image';
 export default function NavBar({ inView }) {
   const active = styles.active;
   const hidden = styles.hidden;
+  const activeMobileBar = styles.activeMobileBar
 
   const [isActive, setIsActive] = useState(false);
 
@@ -19,7 +20,7 @@ export default function NavBar({ inView }) {
 
   return (
     <>
-    <div className={!inView ? `${active}` : `${hidden}`}>
+    <div className={isActive ? `${activeMobileBar}` : !inView ? `${active}` : `${hidden}`}>
       <div className={styles.logo}>
         {' '}
         <Link href="/">
