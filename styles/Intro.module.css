@@ -17,8 +17,8 @@
 @media screen and (max-width: 810px) {
   .container {
     
-    max-height: 90vh;
-    position: relative;
+    height: 120vw;
+    /* position: relative; */
     
   }
 
