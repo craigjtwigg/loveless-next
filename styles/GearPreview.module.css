@@ -73,7 +73,7 @@ pointer-events: none;
     max-height: 4rem;
     justify-self: center;
     color: white;
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: normal;
     filter: brightness(1);
 }
 
@@ -203,7 +203,7 @@ pointer-events: none;
     max-height: none;
     justify-self: center;
     color: white;
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: normal;
     filter: brightness(1);
 }
 
