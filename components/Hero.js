@@ -11,7 +11,7 @@ export default function Hero({ref}) {
         <h1 className={styles.heroText}>MASSIVE PRODUCTIONS FROM SONG TO MASTER</h1>
         <div className={styles.textWrapperOuter}>
            <div className={styles.textWrapper}>
-               <Youtube videoId="caiPVlPHj3Q" />
+               <Youtube youTubeLink="https://www.youtube.com/watch?v=caiPVlPHj3Q" />
            </div>
   
         </div>
