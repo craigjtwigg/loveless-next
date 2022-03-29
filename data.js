@@ -5,6 +5,19 @@ import reviewImg04 from './public/assets/reviewimage04.jpg';
 
 export const addGoogleReview = 'https://search.google.com/local/writereview?placeid=ChIJRfrUGVWSe0gR_H_eIsd_5DI'
 
+export const showreelData = [
+  {
+    artist: 'Infants',
+    title: 'Apple Of Her Eye',
+    workDone: 'Recorded, produced and mixed at Loveless Studio',
+    testimonial: '',
+    notes: '',
+    bandcamp: `<iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2048573592/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://infantstheband.bandcamp.com/track/apple-of-her-eye">Apple Of Her Eye by Infants</a></iframe>`,
+    youtube: 'https://www.youtube.com/watch?v=caiPVlPHj3Q',
+    spotify: `https://open.spotify.com/album/16tocE1hKcCOd1XKpd72Dg?si=Qije9nozR3WsxZhDTIEC-w`
+  }
+]
+
 export const faqData = [
   {
     question: 'Where are you based?',
