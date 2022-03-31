@@ -1,7 +1,7 @@
 import styles from '../styles/Youtube.module.css'
 
 export default function Youtube(props) {
-  let videoId = props.youTubeLink.substring(props.youTubeLink.length - 11)
+  let videoId = props.youTubeLink ? props.youTubeLink.substring(props.youTubeLink.length - 11) : '';
   return (
     <div className={styles.videoWrapper}>
         <iframe

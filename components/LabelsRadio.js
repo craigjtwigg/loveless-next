@@ -3,7 +3,6 @@ import styles from '../styles/LabelsRadio.module.css';
 import RockShow from '../public/assets/labelsradio/rockshow.svg';
 import Introducing from '../public/assets/labelsradio/introducing.svg';
 import RadioX from '../public/assets/labelsradio/radiox.svg';
-import SpotifyLogo from '../public/assets/labelsradio/spotify.svg';
 import Sony from '../public/assets/labelsradio/sony.svg';
 import SocietyOfLosers from '../public/assets/labelsradio/societyoflosers.svg';
 import MusicForNations from '../public/assets/labelsradio/musicfornations.svg';

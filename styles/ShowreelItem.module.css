@@ -1,0 +1,21 @@
+.container {
+
+    
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.icon {
+    filter: invert(1) brightness(0.9);
+    height: 100%;
+    cursor: pointer;
+}
+
+.iconWrapper {
+    height: 50px;
+    width: 50px;
+}

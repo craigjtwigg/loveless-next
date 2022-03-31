@@ -1,7 +1,7 @@
 import styles from '../styles/BandCamp.module.css';
 
 export default function BandCamp(props) {
-  let releaseID = props.embedCode.substring(97, 113)
+  let releaseID = props.embedCode ? props.embedCode.substring(97, 113) : ''
   return (
     <iframe
     //   style={{width: 350 + 'px'; height: 350px;}}
