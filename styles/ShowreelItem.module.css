@@ -1,8 +1,21 @@
 .container {
-
-    
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.137);
+    padding: 2rem;
 }
 
+.label {
+    color: white;
+}
+
+.player {
+    width: 100%;
+    height: minmax(80px, 500px);
+}
+
+.video{
+ aspect-ratio: 16 / 9;
+}
 .icons {
     display: flex;
     gap: 1rem;
@@ -16,6 +29,10 @@
 }
 
 .iconWrapper {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
+}
+
+.iconWrapper:hover{
+    transform: scale(1.1)
 }

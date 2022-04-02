@@ -57,7 +57,8 @@ export default function ShowreelItem({ project }) {
         <h3
           className={styles.title}
         >{`${project.artist} - ${project.title}`}</h3>
-        <div className={styles.player}>
+        <h4 className={styles.label}>{project.label}</h4>
+        <div className={activePlayer === project.youtube ? styles.video : styles.player}>
           {activePlayer === project.bandcamp ? (
             <BandCamp embedCode={project.bandcamp} />
           ) : activePlayer === project.youtube ? (
@@ -77,7 +78,8 @@ export default function ShowreelItem({ project }) {
               </div>
             ))}
         </div>
-
+            <h3 className={styles.notesTitle}>Producer notes...</h3>
+            <p className={styles.notesText}>{project.notes}</p>
       </div>
     </>
   );
