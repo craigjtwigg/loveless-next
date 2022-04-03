@@ -1,25 +1,47 @@
 .container {
-    width: max-content;
+    min-width: 350px;
+    width: 40vw;
     background-color: rgba(0, 0, 0, 0.137);
-    padding: 2rem;
+    padding: 1rem 2rem;
+}
+
+.title {
+    margin-bottom: 0px;
 }
 
 .label {
+    margin-top: 0px;
     color: white;
 }
 
 .player {
-    width: 100%;
+    max-width: 100%;
     height: minmax(80px, 500px);
+    margin: 0px;
 }
 
 .video{
+    max-width: 100%;
  aspect-ratio: 16 / 9;
 }
+
+.optionsWrapper {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .icons {
     display: flex;
     gap: 1rem;
-    padding-top: 1rem;
 }
 
 .icon {
@@ -36,3 +58,28 @@
 .iconWrapper:hover{
     transform: scale(1.1)
 }
+
+.notes {
+    height: max-content;
+}
+
+.hidden {
+    height: 0px;
+    filter: opacity(0);
+}
+
+.notesHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notesText {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.close {
+    cursor: pointer;
+}
+

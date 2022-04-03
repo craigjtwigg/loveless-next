@@ -1,13 +1,13 @@
 import styles from '../styles/BandCamp.module.css';
 
 export default function BandCamp(props) {
-  let releaseID = props.embedCode ? props.embedCode.substring(97, 113) : ''
+  let releaseID = props.embedCode ? props.embedCode.substring(96, 112) : ''
   return (
     <iframe
     //   style={{width: 350 + 'px'; height: 350px;}}
     className={styles.player}
     width="100%"
-          
+          height="120px"
           
       src={`https://bandcamp.com/EmbeddedPlayer/${releaseID}/size=large/bgcol=000000/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/`}
       seamless

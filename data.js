@@ -15,11 +15,38 @@ export const showreelData = [
     testimonial: '',
     notes:
       'Recorded over a weekend on my previous premises in 2018, mastered by Vagrant Records.',
-    bandcamp: `<iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2048573592/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://infantstheband.bandcamp.com/track/apple-of-her-eye">Apple Of Her Eye by Infants</a></iframe>`,
-    youtube: 'https://www.youtube.com/watch?v=caiPVlPHj3Q',
+    bandcamp: `<iframe style="border: 0; width: 100%; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2048573592/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://infantstheband.bandcamp.com/track/apple-of-her-eye">Apple Of Her Eye by Infants</a></iframe>`,
+    youtube: 'https://www.youtube.com/watch?v=GYu1m4eFL_A',
     spotify: `https://open.spotify.com/album/16tocE1hKcCOd1XKpd72Dg?si=Qije9nozR3WsxZhDTIEC-w`,
   },
+    {
+    artist: 'Honeyspider',
+    title: 'Marbles',
+    label: ' ',
+    workDone: 'Recorded, produced and mixed at Loveless Studio',
+    testimonial: '',
+    notes:
+      'Recorded, mixed and produced by Matt at Loveless Studio, mastered by Grant Berry at Fader Mastering.',
+    bandcamp: `<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2538848213/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://honeyspider.bandcamp.com/track/marbles">Marbles by Honeyspider</a></iframe>`,
+    youtube: 'https://www.youtube.com/watch?v=iF2YhUXG5bQ',
+    spotify: `https://open.spotify.com/album/0qm9TpmKiadyMUUhUpf1p2?si=73Mzn2ccS-uwrRWd02qqyQ`,
+  },
+  {
+    artist: 'Blanket',
+    title: 'Turn Ourselves To Stone (Live Studio Session)',
+    label: 'Sony Music / Music For Natiions',
+    workDone: 'Recorded, produced, filmed and mixed at Loveless Studio',
+    testimonial: 'Great attention to detail and fast delivery on a project we did with Matt and Sony Music / Music For Nations',
+    notes:
+      'Recorded, mixed, filmed and produced at Loveless Studio.',
+    bandcamp: ``,
+    youtube: 'https://www.youtube.com/watch?v=0ET5pQX3iXs',
+    spotify: ``,
+  },
 ];
+
+{/* <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2538848213/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://honeyspider.bandcamp.com/track/marbles">Marbles by Honeyspider</a></iframe>
+<iframe style="border: 0; width: 350px; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2538848213/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://infantstheband.bandcamp.com/track/apple-of-her-eye">Apple Of Her Eye by Infants</a></iframe> */}
 
 export const faqData = [
   {
