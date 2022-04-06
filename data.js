@@ -11,6 +11,7 @@ export const showreelData = [
     artist: 'Infants',
     title: 'Apple Of Her Eye',
     label: 'Society Of Losers Records',
+    date: '2018',
     workDone: 'Recorded, produced and mixed at Loveless Studio',
     testimonial: '',
     notes:
@@ -23,6 +24,7 @@ export const showreelData = [
     artist: 'Honeyspider',
     title: 'Marbles',
     label: ' ',
+    date: '2020',
     workDone: 'Recorded, produced and mixed at Loveless Studio',
     testimonial: '',
     notes:
@@ -35,6 +37,7 @@ export const showreelData = [
     artist: 'Blanket',
     title: 'Turn Ourselves To Stone (Live Studio Session)',
     label: 'Sony Music / Music For Natiions',
+    date: '2019',
     workDone: 'Recorded, produced, filmed and mixed at Loveless Studio',
     testimonial: 'Great attention to detail and fast delivery on a project we did with Matt and Sony Music / Music For Nations',
     notes:

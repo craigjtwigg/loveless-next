@@ -22,9 +22,10 @@
 }
 
 .video {
-height: minmax(100px, 500px);
-     aspect-ratio: 16 / 9;
-    padding: 0 10%;
+    
+     aspect-ratio: auto 16 / 9;
+     
+    padding: 2rem;
 }
 
 

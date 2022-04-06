@@ -20,7 +20,7 @@ export default function GearItem(props) {
 
       <div className={isActive ? styles.visible : styles.hidden}>
         <p className={styles.text}>{props.item.description}</p>
-        {props.item.video && <div className={styles.video}><Youtube videoId={props.item.video} /></div>}
+        {props.item.video && <div className={styles.video}><Youtube youTubeLink={props.item.video} /></div>}
       </div>
     </div>
   );

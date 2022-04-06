@@ -60,7 +60,7 @@ export default function ShowreelItem({ project }) {
         <h3
           className={styles.title}
         >{`${project.artist} - ${project.title}`}</h3>
-        <h4 className={styles.label}>{project.label}</h4>
+        <h4 className={styles.label}>{`${project.label} (${project.date})`}</h4>
         <div
           className={
             activePlayer === project.youtube ? styles.video : styles.player
