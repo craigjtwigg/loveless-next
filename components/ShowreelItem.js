@@ -76,7 +76,7 @@ export default function ShowreelItem({ project }) {
         </div>
         <div className={styles.optionsWrapper}>
           <div className={styles.icons}>
-            {players.map((item) => (
+            {players.map((item) => item.link ? (
               <div
                 className={styles.iconWrapper}
                 key={`${item.platform}Toggle`}
@@ -88,7 +88,7 @@ export default function ShowreelItem({ project }) {
                   alt={item.platform}
                 />
               </div>
-            ))}
+            ) : null )}
           </div>
           <div className={styles.buttons}>
             <div onClick={() => toggleNotes('producer')}>
