@@ -20,7 +20,7 @@ export default function NavBar({ inView }) {
 
   return (
     <>
-    <div className={isActive ? `${activeMobileBar}` : !inView ? `${active}` : `${hidden}`}>
+    <div className={active}>
       <div className={styles.logo}>
         {' '}
         <Link href="/">

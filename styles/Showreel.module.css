@@ -1,13 +1,44 @@
 .container {
     min-height: 100vh;
+   text-align: center;
+    
+}
+
+.showreel {
+    margin: 2rem auto;
+    width: calc(2rem + 80%);
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: row-reverse;
+    gap: 2rem;
+}
+
+.spotify {
+    text-align: left;
+}
+
+.player {
+    max-width: 100%;
+    height: minmax(80px, 500px);
+    margin: 0px;
+}
+
+.video{
+    max-width: 100%;
+    min-width: 40vw;
+    height: 50%;
+ aspect-ratio: 16 / 9;
+}
+
+
+.projects {
+     display: flex;
+    
     flex-wrap: wrap;
     margin: 2rem;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    
+    text-align: left;
 }
 
 .title {

@@ -1,7 +1,6 @@
 .active {
        width: 100%;
     height: 10vh;
-    
      background: 
 	linear-gradient(151deg, rgba(14, 2, 14, 0.192), rgba(17, 10, 31, 0.548)),
 	radial-gradient(circle at 40% 124%, rgba(29, 19, 71, 0.233), rgba(36, 4, 34, 0.411)),
@@ -13,7 +12,7 @@
     padding: 1.5rem;
     position: sticky;
     z-index: 100;
-top: 0px;
+    top: 0px;
     mask-image: linear-gradient(
      to bottom,
     rgba(0, 0, 0, 1)70%,

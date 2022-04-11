@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  bottom: 10vh;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -23,7 +24,7 @@
 
 .matt {
   object-fit: cover;
-  object-position: 20vw -20vh;
+  object-position: 20vw -15vh;
   mask-image: linear-gradient(
     to left,
     rgba(0, 0, 0, 1) 35%,
