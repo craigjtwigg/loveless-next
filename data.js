@@ -46,6 +46,45 @@ export const showreelData = [
     youtube: 'https://www.youtube.com/watch?v=0ET5pQX3iXs',
     spotify: ``,
   },
+    {
+    artist: 'Cleargreen',
+    title: 'People',
+    label: '',
+    date: '2019',
+    workDone: 'Recorded, produced, filmed and mixed at Loveless Studio',
+    testimonial: '',
+    notes:
+      'Written, recorded, mixed, and produced at Loveless Studio. Mastered by Grant Berry',
+    bandcamp: ``,
+    youtube: 'https://www.youtube.com/watch?v=vVrnt6oBgCE',
+    spotify: `https://open.spotify.com/track/50CnQjwuIRkr5822HqlbiF?si=994260cc833a4848`,
+  },
+      {
+    artist: 'One Cure For Man',
+    title: 'The Haunted',
+    label: '',
+    date: '2020',
+    workDone: 'Recorded, produced, and mixed at Loveless Studio',
+    testimonial: '',
+    notes:
+      'Written, recorded, mixed, and produced by Matt at Loveless Studio. Mastered by Grant at Fader Mastering',
+    bandcamp: ``,
+    youtube: 'https://www.youtube.com/watch?v=xzCfJrS1qDw',
+    spotify: `https://open.spotify.com/album/2xoAz2P2aA2ytVpDef7j5S`,
+  },
+        {
+    artist: 'Heathens',
+    title: 'Glorious Doom',
+    label: '',
+    date: '2019',
+    workDone: 'Recorded, produced, and mixed at Loveless Studio',
+    testimonial: '',
+    notes:
+      'Written, recorded, mixed, and produced by Matt at Loveless Studio.',
+    bandcamp: ``,
+    youtube: 'https://www.youtube.com/watch?v=ny7ZnANYVXQ',
+    spotify: `https://open.spotify.com/track/3Oepb4omm7E05oDGaj9SPq?si=b4f2dbb3a3624fa7`,
+  },
 ];
 
 {/* <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2538848213/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://honeyspider.bandcamp.com/track/marbles">Marbles by Honeyspider</a></iframe>
