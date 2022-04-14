@@ -27,7 +27,7 @@ top: 0px;
   top: 0;
   left: 0;
   content: ' ';
-  background-image: url('../public/assets/vhs02.gif');
+  background-image: url('../public/assets/vhs02.webp');
   background-position: -30rem;
   filter: opacity(0.9) brightness(0.9);
   background-size: cover;
