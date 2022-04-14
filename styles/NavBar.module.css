@@ -38,7 +38,7 @@
   top: 0;
   left: 0;
   content: ' ';
-  background-image: url('../public/assets/vhs02.gif');
+  background-image: url('../public/assets/vhs02.webp');
   opacity: 0.2;
   background-size: cover;
   background-repeat: repeat;
@@ -96,7 +96,6 @@ text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 30px rgba(255,255,255,.5);
     .mobileNavToggle {
       display: block;
       cursor: pointer;
-      z-index: 222;
     }
 
     .icon {

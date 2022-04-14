@@ -59,7 +59,7 @@ cursor: pointer;
   top: 0;
   left: 0;
   content: ' ';
-  background-image: url('../public/assets/vhs01.gif');
+  background-image: url('../public/assets/vhs01.webp');
   border-radius: inherit;
   background-size: cover;
   background-repeat: repeat;
