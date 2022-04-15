@@ -7,7 +7,7 @@ import Close from '../public/assets/close.svg';
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function NavBar({ inView }) {
+export default function NavBar() {
   const active = styles.active;
   const hidden = styles.hidden;
   const activeMobileBar = styles.activeMobileBar

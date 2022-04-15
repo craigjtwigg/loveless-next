@@ -1,9 +1,10 @@
-import Image from 'next/image';
-import MattHeader from '../public/assets/mattrear.jpg';
-import Hero from './Hero';
 import styles from '../styles/Header.module.css';
+import Image from 'next/image';
+import MattHeader from '../public/assets/mattrear.webp';
+import Hero from './Hero';
 
-export default function Header({ref}) {
+
+export default function Header() {
   return ( <>
       <header className={styles.header}>
       <div className={styles.headerImage}>
@@ -19,7 +20,7 @@ export default function Header({ref}) {
       </div>
      
     </header>
-     <Hero ref={ref}/></>
+     <Hero /></>
 
   );
 }

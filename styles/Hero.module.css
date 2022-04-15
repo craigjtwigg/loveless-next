@@ -1,4 +1,4 @@
-.loveless {
+.container {
   position: absolute;
   top: 13vh;
   left: 2vw;
@@ -12,96 +12,27 @@
   justify-content: center;
 }
 
-.textWrapper {
-  width: 100%;
-  height: 100%;
-  mask-image: linear-gradient(
-    to right,
-    transparent 20%,
-    rgba(0, 0, 0, 1) 25%,
-    rgba(0, 0, 0, 1) 75%,
-    transparent 80%
-  );
-}
-
-.textWrapperOuter {
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  mask-image: linear-gradient(
-    to top,
-    transparent 18%,
-    rgba(0, 0, 0, 1) 50%,
-    transparent 82%
-  );
-  display: flex;
-  justify-content: center;
-}
-
-.logo {
+.text {
   z-index: 2;
-  font-size: 5em;
-  margin: 0px;
-  font-weight: 400;
+  font-size: 3rem;
+  margin: 2rem;
+  font-weight: 600;
   mask-mode: unset;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
     0 0 30px rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
 
-.location {
-  font-size: 2rem;
-  margin: 20px;
-}
-
-.heroText {
-  font-size: 1.5rem;
-   background: linear-gradient(151deg, #ff82b26e, #8a59bb48),
-    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-.cta {
-  padding: 2rem;
-  background-color: transparent;
-  border: 3px solid rgb(166, 78, 248);
-  border-radius: 50px;
-  font-family: inherit;
-  margin: 20px;
-  mask-mode: unset;
-  transition: ease-in 0.2s;
-}
-
-.cta:hover {
-  transform: translateY(-3px);
-  background: rgb(158, 58, 252);
-  cursor: pointer;
-}
-
-.cta:after {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  content: ' ';
-  background-image: url('../public/assets/vhs01.webp');
-  border-radius: inherit;
-  background-size: cover;
-  background-repeat: repeat;
-  mix-blend-mode: difference;
-}
 
 @media screen and (max-width: 810px) {
-  .loveless {
+  .container {
     position: absolute;
-    top: 100vw;
+    top: 10vh;
     left: 0px;
     z-index: 5;
     width: 90%;
+    min-height: 80vh;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,10 +41,10 @@
     justify-content: center;
     text-align: center;
     margin-left: 5%;
-    box-shadow: none;
+  
   }
 
-  .textWrapperOuter {
-    display: none;
+  .text {
+    font-size: 2.5rem;
   }
 }
