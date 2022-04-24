@@ -8,14 +8,29 @@ import MattPreview from './MattPreview';
 export default function Intro() {
   return (
     <>
-    <section className={styles.container}>
-      <h2 className={styles.text}>
-         Loveless Studio is a purpose built recording studio in Lancashire, England trusted by Artists, Record Labels and Industry Professionals for over 10 years.
-      </h2>
-    </section>
+      <section className={styles.container}>
+        <div className={styles.text}>
+          <h2 className={styles.header}>
+            Loveless Studio is a fully equipped purpose built recording studio
+            in Colne, Lancashire ran by local producer Matt Heap.
+          </h2>
+        </div>
 
-        <MattPreview />
-      </>
+        <div className={styles.video}>
+          <Youtube youTubeLink="https://www.youtube.com/watch?v=caiPVlPHj3Q" />
+        </div>
+        {/* <ul className={styles.list}>
+          <li>production</li>
+          <li>|</li>
+          <li>engineering</li>
+          <li>|</li>
+          <li>mixing</li>
+          <li>|</li>
+          <li>mastering</li>
+        </ul> */}
+      </section>
+
+      {/* <MattPreview /> */}
+    </>
   );
 }
-

@@ -13,6 +13,9 @@ export default function Testimonials() {
 
   return (
     <div id="testimonials" className={styles.container}>
+      <h2 className={styles.title}>
+        What previous clients have to say...
+      </h2>
       <Carousel
         ref={carouselRef}
         enableAutoPlay={true}

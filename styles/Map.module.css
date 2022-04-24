@@ -38,6 +38,13 @@ pointer-events: none;
  box-shadow: 4px 4px 5px pink;
 }
 
+
+@media screen and (max-width: 810px){
+  .mapWrapper::after{
+    display: none;
+  }
+}
+
 .text {
 
     background-color: var(--main-bg);

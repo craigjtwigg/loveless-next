@@ -1,28 +1,70 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-   height: 60vh;
-  width: calc(80vw + 5px);
+  height: fit-content;
+  width: 90%;
   margin: 0 auto;
-  gap: 2rem;
   padding-bottom: 3rem;
-  text-align: center;
-  
   line-height: 1.4;
-    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+grid-template-areas: "video h2"
+                     "video h2"
+                     "list list";
+                     
+  gap: 3rem;
+}
+
+
+.text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: h2;
+  text-align: center;
+}
+
+.header {
+  margin: 0px;
+}
+
+.video {
+  min-height: max-content;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  grid-area: video;
+  filter: brightness(1.1);
+  mix-blend-mode: lighten;
+}
+
+.list {
+  margin: 3rem auto;
+  width: 80%;
+  grid-area: list;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 2rem;
+  background-color: var(--main-bg);
+  background: linear-gradient(151deg, #fda0c4c7, #ac88cfde),
+    radial-gradient(
+      circle at 40% 124%,
+      rgb(255, 255, 255),
+      rgba(168, 168, 168, 0.884)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 810px) {
-  .container {
-    
-    height: 120vw;
-    /* position: relative; */
-    
-  }
 
-  .text {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .header {
     font-size: 1.5rem;
+    margin-bottom: 3rem;
   }
 }

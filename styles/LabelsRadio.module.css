@@ -14,7 +14,7 @@
 }
 
 .logo {
-    filter: invert(1) brightness(0.9);
+    filter: invert(1) brightness(0.94);
     height: 100%;
     mix-blend-mode: color-dodge;
 }
