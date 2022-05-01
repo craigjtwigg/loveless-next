@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import ContactForm from '../components/ContactForm';
 import FaqCard from '../components/FaqCard';
 import { faqData } from '../data';
+import Footer from '../components/Footer';
 
 export default function Faq() {
       const { ref, inView } = useInView({
@@ -20,6 +21,7 @@ export default function Faq() {
     
     
     <ContactForm faq={true} />
+    <Footer />
     </div>
   )
 }

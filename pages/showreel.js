@@ -8,6 +8,7 @@ import { showreelData } from '../data';
 import ShowreelItem from '../components/ShowreelItem';
 import Button from '../components/Button';
 import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 
 export default function Showreel() {
   const { ref, inView } = useInView({
@@ -49,8 +50,10 @@ export default function Showreel() {
             </div>
             <Button text={'Add the Loveless Studio playlist to your Spotify library'}/>
           </div>
-<ContactForm />
+
       </div>
+      <ContactForm />
+      <Footer />
     </>
   );
 }

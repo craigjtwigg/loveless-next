@@ -34,7 +34,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: max-content;
-    width: 90vw;
+    width: 100%;
      transition: 1s ease;
      filter: opacity(1);
 }

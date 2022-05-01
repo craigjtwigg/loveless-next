@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Content from '../components/Content';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
 
       <Content />
+      <Footer />
     </>
   );
 }

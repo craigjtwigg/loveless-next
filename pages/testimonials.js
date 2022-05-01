@@ -4,6 +4,7 @@ import styles from '../styles/Testimonials.module.css'
 import NavBar from '../components/NavBar';
 import { useInView } from 'react-intersection-observer';
 import { reviewData, addGoogleReview } from "../data";
+import Footer from "../components/Footer";
 
 export default function Testimonials() {
      const { ref, inView } = useInView({
@@ -35,7 +36,9 @@ export default function Testimonials() {
            <p className={styles.google}>
                 Have you made a record here at Loveless Studio??<br /><Link href={addGoogleReview}><a className={styles.a}>Tell people  about the session on Google.</a></Link>
                 </p>
-        </div></>
+        </div>
+        <Footer />
+        </>
 
   )
 }
