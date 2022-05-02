@@ -17,8 +17,8 @@
 .question {
     font-size: 2rem;
     background-color: var(--main-bg);
-  background: linear-gradient(151deg, #ff82b26e, #6c439448),
-    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
+  background: linear-gradient(151deg, #f7f7f76e, #ffffff48),
+    radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 255, 255, 0)),
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   -webkit-background-clip: text;

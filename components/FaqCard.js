@@ -1,6 +1,7 @@
 import styles from '../styles/FaqCard.module.css';
 import { useState } from 'react';
 import Button from './Button';
+import ReactMarkdown from 'react-markdown'
 
 export default function FaqCard(props) {
   const [isActive, setIsActive] = useState(false)
@@ -19,7 +20,7 @@ export default function FaqCard(props) {
         <Button  small={true} text={!isActive ? 'see answer' : 'hide answer'}  />
         </div>
         </div>
-      <div className={isActive ? styles.answer : styles.hidden}>{props.answer}</div>
+      <div className={isActive ? styles.answer : styles.hidden}><ReactMarkdown>{props.answer}</ReactMarkdown></div>
     </div>
   );
 }

@@ -27,6 +27,7 @@
 .nerdlings {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
+    text-align: center;
 }
 
 .nerdlings:hover{
@@ -37,4 +38,18 @@
 
 .strong {
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 810px) {
+    .icon {
+        width: 30px;
+    }
+
+    .nerdlings {
+        font-size: 0.7rem;
+    }
+
+    .strong {
+        font-size: 1rem;
+    }
 }
