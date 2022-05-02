@@ -10,10 +10,12 @@ import Button from '../components/Button';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
-export default function Showreel() {
+export default function Showreel({projects}) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
+
+  console.log(projects)
   return (
     <>
       <NavBar inView={inView} />
@@ -35,8 +37,8 @@ export default function Showreel() {
            <h2 className={styles.h2}>Projects</h2>
         <p className={styles.text}>Take a deep dive into the tracks, albums and live sessions that have been produced here at Loveless Studios over the years...</p>
         </div>
-          {showreelData.map((project) => (
-            <ShowreelItem key={project.title} project={project} />
+          {projects.map((project) => (
+            <ShowreelItem key={project.attributes.title} project={project.attributes} />
           ))}
         </div>
 
@@ -56,4 +58,54 @@ export default function Showreel() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://salty-plateau-21551.herokuapp.com/graphql', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `query Projects {
+  projects {
+    data {
+    	attributes {
+        artist
+        title
+        label
+        year
+        youtube
+        spotify
+        bandcamp
+        producernotes
+        review {
+          data {
+            attributes {
+              author
+              review
+              rating
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+                }
+              }
+            }
+          }
+        }
+      }
+    }`,
+    }),
+  });
+
+  const json = await res.json();
+
+  return {
+    props: {
+      projects: json.data.projects.data,
+    },
+    revalidate: 1,
+  };
 }
