@@ -7,10 +7,12 @@
 
 .title {
     margin-bottom: 0px;
+    min-height: 4.6rem;
 }
 
 .label {
     margin-top: 0px;
+    margin-bottom: 2rem;
     color: white;
 }
 

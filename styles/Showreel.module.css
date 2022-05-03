@@ -8,6 +8,11 @@
 .spotify {
     /* background: rgba(0, 0, 0, 0.37); */
     padding: 6rem 5rem 0px 5rem;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .showreel {
@@ -15,9 +20,10 @@
 }
 
 .player {
-    max-width: 80%;
+    position: relative;
+    left: 1rem;
     height: minmax(80px, 500px);
-    margin: auto;
+   
 }
 
 .video{

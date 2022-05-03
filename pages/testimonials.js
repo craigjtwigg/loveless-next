@@ -6,10 +6,12 @@ import { useInView } from 'react-intersection-observer';
 import { reviewData, addGoogleReview } from "../data";
 import Footer from "../components/Footer";
 
-export default function Testimonials() {
+export default function Testimonials({reviews}) {
      const { ref, inView } = useInView({
     threshold: 0.5,
   });
+
+  console.log(reviews)
   return (
       <>
                <NavBar inView={inView} />
@@ -21,14 +23,14 @@ export default function Testimonials() {
             </p>
           
         <div className={styles.testimonials}>
-         {reviewData.map((review, idx) => (
+         {reviews.map((review, idx) => (
              <>
             <ReviewCard
               key={idx}
-              author={review.author}
-              image={review.imageSrc}
-              stars={review.stars}
-              content={review.review}
+              author={review.attributes.author}
+              image={review.attributes.image.data.attributes.url}
+              stars={review.attributes.rating}
+              content={review.attributes.review}
          /> 
          <div className={styles.divider}></div>
          </>))}
@@ -41,4 +43,40 @@ export default function Testimonials() {
         </>
 
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://salty-plateau-21551.herokuapp.com/graphql', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `query Reviews {
+  reviews {
+          data {
+            attributes {
+              author
+              review
+              rating
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+                }
+              }
+            }
+          }`,
+    }),
+  });
+
+  const json = await res.json();
+
+  return {
+    props: {
+      reviews: json.data.reviews.data,
+    },
+    revalidate: 1,
+  };
 }

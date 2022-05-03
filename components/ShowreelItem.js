@@ -8,6 +8,7 @@ import BandcampLogo from '../public/assets/platforms/bandcamp.svg';
 import YoutubeLogo from '../public/assets/platforms/youtube.svg';
 import Close from '../public/assets/close.svg';
 import { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown'
 import Image from 'next/image';
 
 export default function ShowreelItem({ project }) {
@@ -16,10 +17,10 @@ export default function ShowreelItem({ project }) {
   const [activeNotes, setActiveNotes] = useState();
 
   useEffect(() => {
-    project.bandcamp
-      ? setActivePlayer(project.bandcamp)
-      : project.youtube
+    project.youtube
       ? setActivePlayer(project.youtube)
+      : project.bandcamp
+      ? setActivePlayer(project.bandcamp)
       : setActivePlayer(project.spotify);
   }, []);
 
@@ -91,20 +92,24 @@ export default function ShowreelItem({ project }) {
             ) : null )}
           </div>
           <div className={styles.buttons}>
-            <div onClick={() => toggleNotes('producer')}>
-              <Button small={true} text="Producer notes" />
+            {project.producernotes ? (
+               <div onClick={() => toggleNotes('producer')}>
+              <Button small={true} text="Production notes" />
             </div>
-            <div onClick={() => toggleNotes('artist')}>
-              <Button small={true} alternate={true} text="Artist notes" />
-            </div>
+            ) : null}
+           
+            {project.review.data ? (  <div onClick={() => toggleNotes('artist')}>
+              <Button small={true} alternate={true} text="Artist testimonial" />
+            </div>) : null}
+          
           </div>
         </div>
         <div className={activeNotes ? styles.notes : styles.hidden}>
           <div className={styles.notesHeader}>
           <h3 className={styles.notesTitle}>
             {activeNotes === 'producer'
-              ? 'Producer notes...'
-              : 'Artist notes...'}
+              ? 'Production notes...'
+              : 'Artist testimonial...'}
           </h3>
           <div onClick={() => toggleNotes('')} className={styles.close}>
             <Image src={Close} alt='close notes' />
@@ -112,7 +117,7 @@ export default function ShowreelItem({ project }) {
           
           </div>
           <p className={styles.notesText}>
-            {activeNotes === 'producer' ? project.producernotes : project.testimonial}
+            {activeNotes === 'producer' ? project.producernotes : project.review.data ? project.review.data.attributes.review : '' }
           </p>
         </div>
       </div>
