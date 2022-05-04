@@ -9,10 +9,10 @@ import FaqPreview from './FaqPreview';
 import AudioPlayer from './AudioPlayer';
 import MattPreview from './MattPreview';
 
-export default function Content(props) {
+export default function Content({matt, showreelvideo}) {
   return (
     <>
-      <Intro />
+      <Intro showreelvideo={showreelvideo}/>
 
       <ShowreelPreview />
 
@@ -20,7 +20,7 @@ export default function Content(props) {
 
       {/* <GearPreview /> */}
       <FaqPreview />
-      <MattPreview />
+      <MattPreview matt={matt}/>
       <ContactForm />
     </>
   );

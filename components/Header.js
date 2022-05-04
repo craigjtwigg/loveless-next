@@ -5,7 +5,7 @@ import CabsHeader from '../public/assets/cabs.webp';
 import DrumHeader from '../public/assets/liveroom.webp';
 import Hero from './Hero';
 
-export default function Header() {
+export default function Header({hero}) {
   return (
     <>
       <header className={styles.header}>
@@ -14,7 +14,7 @@ export default function Header() {
             <Image
               className={styles.matt}
               priority="true"
-              src={MattHeader}
+              src={hero.desktopimage.data.attributes.url}
               alt="promotional image of Loveless Studio producer Matt Heap at the studio."
               width={1267}
               height={1280}
@@ -27,7 +27,7 @@ export default function Header() {
               <Image
                 className={styles.cabs}
                 priority="true"
-                src={CabsHeader}
+                src={hero.topmobileimage.data.attributes.url}
                 alt="promotional image of Loveless Studio producer Matt Heap at the studio."
                 width={3000}
                 height={2000}
@@ -38,7 +38,7 @@ export default function Header() {
               <Image
                 className={styles.room}
                 priority="true"
-                src={DrumHeader}
+                src={hero.topmobileimage.data.attributes.url}
                 alt="promotional image of Loveless Studio producer Matt Heap at the studio."
                 width={1500}
                 height={1000}
@@ -48,7 +48,7 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <Hero />
+      <Hero hero={hero}/>
     </>
   );
 }

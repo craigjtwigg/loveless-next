@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Button from './Button';
 import MattPreview from './MattPreview';
 
-export default function Intro() {
+export default function Intro({showreelvideo}) {
   return (
     <>
       <section className={styles.container}>
@@ -17,7 +17,7 @@ export default function Intro() {
         </div>
 
         <div className={styles.video}>
-          <Youtube youTubeLink="https://www.youtube.com/watch?v=caiPVlPHj3Q" />
+          <Youtube youTubeLink={showreelvideo} />
         </div>
         {/* <ul className={styles.list}>
           <li>production</li>
