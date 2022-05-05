@@ -3,9 +3,10 @@ import { gearData } from '../data';
 import GearItem from './GearItem';
 
 export default function GearCategory(props) {
-  const categoryData = gearData.filter(
-    (item) => item.category === props.category
+  const categoryData = props.gear.filter(
+    (item) => item.attributes.category === props.category
   );
+ 
   console.log(categoryData);
 
   const categoryTitle =
@@ -15,7 +16,11 @@ export default function GearCategory(props) {
       ? 'pedals'
       : props.category === 'amp'
       ? 'amps & cabs'
-      : props.category;
+      : props.category === 'microphone'
+      ? 'microphones'
+      : props.category === 'outboard'
+      ? 'outboard & i/o' :
+      props.category;
   return (
     <div id={props.category} className={props.alt ? styles.alt : styles.container}>
 

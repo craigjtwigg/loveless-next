@@ -10,7 +10,7 @@ import Carousel from 'react-elastic-carousel';
 import { useRef } from 'react';
 import Footer from '../components/Footer';
 
-export default function Gear() {
+export default function Gear({gear, header, subheader, headerimage}) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -34,24 +34,21 @@ export default function Gear() {
         <>
           <div className={styles.header}>
             <Image
-              height={2000}
-              width={3000}
+              height={headerimage.attributes.height}
+              width={headerimage.attributes.width}
               priority="true"
               layout="responsive"
               className={styles.headerImage}
-              src={AmpRack}
+              src={headerimage.attributes.url}
               alt="Industry standard equipment at Loveless Studio"
             />
           </div>
           <div className={styles.hero}>
             <h1 className={styles.title}>
-              We have everything here to bring your music to life
+              {header}
             </h1>
             <p className={styles.text}>
-              {' '}
-              Loveless Studio is kitted out with a wide range of carefully
-              curated boutique and industry standard instruments, amplifiers,
-              pedals, drums and the highest quality recording equiptment.
+              {subheader}
             </p>
             <div className={styles.cards}>
               <Carousel
@@ -85,17 +82,67 @@ export default function Gear() {
           </div>
         </>
         <div className={styles.listContainer}>
-        <GearCategory category="guitars & basses" />
-        <GearCategory category="pedals" alt={true}/>
-        <GearCategory category="amps & cabs" />
-        <GearCategory category="drums" alt={true}/>
-        <GearCategory category="microphones" />
-        <GearCategory category="monitoring" alt={true}/>
-        <GearCategory category="outboard & i/o" />
+        <GearCategory gear={gear} category="guitar" />
+        <GearCategory gear={gear} category="pedal" alt={true}/>
+        <GearCategory gear={gear} category="amp" />
+        <GearCategory gear={gear} category="drum" alt={true}/>
+        <GearCategory gear={gear} category="microphone" />
+        <GearCategory gear={gear} category="monitoring" alt={true}/>
+        <GearCategory gear={gear} category="outboard" />
 </div>
 
       </div>
 <Footer />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://salty-plateau-21551.herokuapp.com/graphql', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query: `query Gear {
+  gears {
+    data {
+      attributes {
+        name
+        category
+        description
+        video
+      }
+    }
+  }
+  gearpage {
+    data {
+      attributes {
+        header
+        subheader
+        headerimage {
+          data {
+            attributes {
+              height
+              width
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}`,
+    }),
+  });
+
+  const json = await res.json();
+
+  return {
+    props: {
+      gear: json.data.gears.data,
+      headerimage: json.data.gearpage.data.attributes.headerimage.data,
+      header: json.data.gearpage.data.attributes.header,
+      subheader: json.data.gearpage.data.attributes.subheader,
+    },
+    revalidate: 1,
+  };
 }

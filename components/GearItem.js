@@ -13,14 +13,14 @@ export default function GearItem(props) {
   return (
     <div className={styles.container}>
       <div className={styles.titleWrapper}>
-        <h3 className={styles.title}>{props.item.name}</h3>
+        <h3 className={styles.title}>{props.item.attributes.name}</h3>
         <div className={styles.detailsBtn} onClick={() => toggleActive()}><Button small={true} text={isActive ? 'hide details' : 'show details'}  /></div>
         
       </div>
 
       <div className={isActive ? styles.visible : styles.hidden}>
-        <p className={styles.text}>{props.item.description}</p>
-        {props.item.video && <div className={styles.video}><Youtube youTubeLink={props.item.video} /></div>}
+        <p className={styles.text}>{props.item.attributes.description}</p>
+        {props.item.attributes.video && <div className={styles.video}><Youtube youTubeLink={props.item.attributes.video} /></div>}
       </div>
     </div>
   );
