@@ -15,7 +15,11 @@ export default function Showreel({projects, showreelvideo, spotifyplaylist, head
     threshold: 0.5,
   });
 
-  console.log(showreelvideo)
+  let sortedProjects = projects.sort(function (a, b) {
+  return b.attributes.year - a.attributes.year;
+});
+
+  console.log(sortedProjects)
   
   return (
     <>
@@ -38,7 +42,7 @@ export default function Showreel({projects, showreelvideo, spotifyplaylist, head
            <h2 className={styles.h2}>{header}</h2>
         <p className={styles.text}>{subheader}</p>
         </div>
-          {projects.map((project) => (
+          {sortedProjects.map((project) => (
             <ShowreelItem key={project.attributes.title} project={project.attributes} />
           ))}
         </div>

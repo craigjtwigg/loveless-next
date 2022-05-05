@@ -3,6 +3,7 @@ import Facebook from '../public/assets/platforms/facebookicon.svg'
 import GMB from '../public/assets/platforms/gmbicon.svg'
 import Instagram from '../public/assets/platforms/instaicon.svg'
 import Spotify from '../public/assets/platforms/spotify.svg'
+import NerdlingsLogo from '../public/assets/face.svg'
 import Image from 'next/image'
 
 
@@ -18,11 +19,13 @@ export default function Footer() {
         ))}
       
         </div>
-          <p className={styles.nerdlings}>
+          <div className={styles.nerdlings}>
               <a target="_blank" href="https://www.nerdlings.co.uk" rel="noopener noreferrer">
                   Web Development and Design by <strong className={styles.strong}>NERDLINGS</strong>.
               </a>
-        </p>
+              <div  className={styles.nerdlingslogo}>  <Image src={NerdlingsLogo} alt="Web development and design by Nerdlings" /></div>
+            
+        </div>
     </footer>
   )
 }

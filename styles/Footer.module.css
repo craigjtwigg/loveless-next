@@ -25,7 +25,10 @@
 }
 
 .nerdlings {
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    color: #f3cbdabd;;
+    font-family: 'Fira Mono', monospace;
+    font-weight: 300;
     font-size: 1rem;
     text-align: center;
 }
@@ -36,7 +39,18 @@
     cursor: pointer;
 }
 
+.nerdlingslogo {
+filter: invert(1) brightness(0.9);
+mix-blend-mode: color-burn;
+width: 40px;
+position: relative;
+bottom: 10px;
+
+}
+
 .strong {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 900;
     font-size: 1.2rem;
 }
 
