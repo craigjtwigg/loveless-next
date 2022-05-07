@@ -1,24 +1,18 @@
-import Head from 'next/head';
+import SEO from '../components/SEO';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 
-export default function Home({herosection, mattsection, showreelvideo}) {
+export default function Home({ reviews, seo, herosection, mattsection, showreelvideo }) {
+
   return (
     <>
+      <SEO seo={seo} />
       <NavBar />
-      <Head>
-        <title>Loveless Studio | Colne, Lancashire Recording Studio </title>
-        <meta
-          name="description"
-          content="Loveless Recording studio in Colne, Lancashire."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header hero={herosection}/>
+      <Header hero={herosection} />
 
-      <Content matt={mattsection} showreelvideo={showreelvideo}/>
+      <Content matt={mattsection} showreelvideo={showreelvideo} reviews={reviews}/>
       <Footer />
     </>
   );
@@ -30,6 +24,56 @@ export async function getStaticProps() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `query Homepage {
+        homepage {
+          data {
+            attributes {
+              seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                width
+                height
+                url
+              }
+            }
+          }
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  width
+                  height
+                  url
+                }
+              }
+            }
+          }
+        }
+            }
+          }
+        }
+          reviews {
+          data {
+            attributes {
+              featured
+              author
+              review
+              rating
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+                }
+              }
+            }
    herosection {
     data {
       attributes {
@@ -95,6 +139,8 @@ export async function getStaticProps() {
       herosection: json.data.herosection.data.attributes,
       showreelvideo: json.data.showreelpage.data.attributes.youtubeshowreel,
       mattsection: json.data.mattsection.data.attributes,
+      seo: json.data.homepage.data.attributes.seo,
+      reviews: json.data.reviews.data.filter((review) => review.attributes.featured),
     },
     revalidate: 1,
   };

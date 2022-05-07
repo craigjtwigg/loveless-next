@@ -4,11 +4,11 @@ import styles from '../styles/TestimonialsPreview.module.css';
 import ReviewCard from './ReviewCard';
 import Carousel from 'react-elastic-carousel';
 
-export default function Testimonials() {
+export default function Testimonials({reviews}) {
   const itemsPerPage = 1;
 
   const carouselRef = useRef(null);
-  const totalPages = Math.ceil(reviewData.length / itemsPerPage);
+  const totalPages = Math.ceil(reviews.length / itemsPerPage);
   let resetTimeout;
 
   return (
@@ -34,14 +34,14 @@ export default function Testimonials() {
           }
         }}
       >
-        {reviewData.map((review, idx) => (
+        {reviews.map((review, idx) => (
           <>
             <ReviewCard
               key={idx}
-              author={review.author}
-              image={review.imageSrc}
-              stars={review.stars}
-              content={review.review}
+              author={review.attributes.author}
+              image={review.attributes.image.data.attributes.url}
+              stars={review.attributes.rating}
+              content={review.attributes.review}
             />
           </>
         ))}

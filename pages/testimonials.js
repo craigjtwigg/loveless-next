@@ -4,22 +4,24 @@ import styles from '../styles/Testimonials.module.css'
 import NavBar from '../components/NavBar';
 import { useInView } from 'react-intersection-observer';
 import { reviewData, addGoogleReview } from "../data";
+import SEO from "../components/SEO";
 import Footer from "../components/Footer";
 
-export default function Testimonials({reviews}) {
+export default function Testimonials({seo, header, subheader, reviews}) {
      const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
-  console.log(reviews)
+  console.log(seo)
   return (
       <>
+      <SEO seo={seo}/>
                <NavBar inView={inView} />
           <div className={styles.container}>
      
-        <h1 className={styles.title}>testimonials</h1>
+        <h1 className={styles.title}>{header}</h1>
         <p className={styles.text}>
-       As a producer delivering unique recordings that meet the needs and tastes of each artist is the top priority - please take a moment to read what some of my clients have had to say about their experiences at the studio.
+      {subheader}
             </p>
           
         <div className={styles.testimonials}>
@@ -51,6 +53,41 @@ export async function getStaticProps() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `query Reviews {
+          testimonialspage {
+    data {
+      attributes {
+         seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                width
+                height
+                url
+              }
+            }
+          }
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  width
+                  height
+                  url
+                }
+              }
+            }
+          }
+        }
+        header
+        subheader
+      }
+    }
+  }      
   reviews {
           data {
             attributes {
@@ -76,6 +113,9 @@ export async function getStaticProps() {
   return {
     props: {
       reviews: json.data.reviews.data,
+      header: json.data.testimonialspage.data.attributes.header,
+      subheader: json.data.testimonialspage.data.attributes.subheader,
+      seo: json.data.testimonialspage.data.attributes.seo[0],
     },
     revalidate: 1,
   };

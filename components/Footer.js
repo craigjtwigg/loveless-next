@@ -23,7 +23,7 @@ export default function Footer() {
               <a target="_blank" href="https://www.nerdlings.co.uk" rel="noopener noreferrer">
                   Web Development and Design by <strong className={styles.strong}>NERDLINGS</strong>.
               </a>
-              <div  className={styles.nerdlingslogo}>  <Image src={NerdlingsLogo} alt="Web development and design by Nerdlings" /></div>
+              {/* <div  className={styles.nerdlingslogo}>  <Image src={NerdlingsLogo} alt="Web development and design by Nerdlings" /></div> */}
             
         </div>
     </footer>

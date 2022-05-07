@@ -1,5 +1,5 @@
 import styles from '../styles/Gear.module.css';
-import { gearData } from '../data';
+import SEO from '../components/SEO';
 import { useInView } from 'react-intersection-observer';
 import NavBar from '../components/NavBar';
 import GearCategory from '../components/GearCategory';
@@ -10,7 +10,7 @@ import Carousel from 'react-elastic-carousel';
 import { useRef } from 'react';
 import Footer from '../components/Footer';
 
-export default function Gear({gear, header, subheader, headerimage}) {
+export default function Gear({gear, header, subheader, headerimage, seo}) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -26,8 +26,11 @@ export default function Gear({gear, header, subheader, headerimage}) {
   const totalPages = Math.ceil(7 / itemsPerPage);
   let resetTimeout;
 
+  console.log(seo)
   return (
     <>
+    <SEO seo={seo} />
+    
       <NavBar inView={inView} />
 
       <div className={styles.container}>
@@ -70,11 +73,7 @@ export default function Gear({gear, header, subheader, headerimage}) {
                   }
                 }}
               >
-                <GearCategoryCard category="guitars & basses" />
-                <GearCategoryCard category="pedals" />
-                <GearCategoryCard category="amps & cabs" />
-                <GearCategoryCard category="drums" />
-                <GearCategoryCard category="microphones" />
+                <GearCategoryCard category="guitaomephones" />
                 <GearCategoryCard category="monitoring" />
                 <GearCategoryCard category="outboard & i/o" />
               </Carousel>
@@ -116,6 +115,33 @@ export async function getStaticProps() {
   gearpage {
     data {
       attributes {
+        seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                width
+                height
+                url
+              }
+            }
+          }
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  width
+                  height
+                  url
+                }
+              }
+            }
+          }
+        }
         header
         subheader
         headerimage {
@@ -142,6 +168,7 @@ export async function getStaticProps() {
       headerimage: json.data.gearpage.data.attributes.headerimage.data,
       header: json.data.gearpage.data.attributes.header,
       subheader: json.data.gearpage.data.attributes.subheader,
+      seo: json.data.gearpage.data.attributes.seo[0],
     },
     revalidate: 1,
   };

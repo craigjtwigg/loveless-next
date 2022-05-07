@@ -9,14 +9,14 @@ import FaqPreview from './FaqPreview';
 import AudioPlayer from './AudioPlayer';
 import MattPreview from './MattPreview';
 
-export default function Content({matt, showreelvideo}) {
+export default function Content({reviews, matt, showreelvideo}) {
   return (
     <>
       <Intro showreelvideo={showreelvideo}/>
 
       <ShowreelPreview />
 
-      <TestimonialsPreview />
+      <TestimonialsPreview reviews={reviews}/>
 
       {/* <GearPreview /> */}
       <FaqPreview />

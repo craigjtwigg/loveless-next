@@ -1,16 +1,15 @@
 import styles from '../styles/Showreel.module.css';
+import SEO from '../components/SEO';
 import Youtube from '../components/Youtube';
 import NavBar from '../components/NavBar';
 import { useInView } from 'react-intersection-observer';
-import BandCamp from '../components/BandCamp';
 import Spotify from '../components/Spotify';
-import { showreelData } from '../data';
 import ShowreelItem from '../components/ShowreelItem';
 import Button from '../components/Button';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
-export default function Showreel({projects, showreelvideo, spotifyplaylist, header, subheader}) {
+export default function Showreel({seo, projects, showreelvideo, spotifyplaylist, header, subheader}) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -19,10 +18,10 @@ export default function Showreel({projects, showreelvideo, spotifyplaylist, head
   return b.attributes.year - a.attributes.year;
 });
 
-  console.log(sortedProjects)
   
   return (
     <>
+    <SEO seo={seo} />
       <NavBar inView={inView} />
       <div className={styles.container}>
  
@@ -74,6 +73,33 @@ export async function getStaticProps() {
    showreelpage {
     data {
       attributes {
+         seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                width
+                height
+                url
+              }
+            }
+          }
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  width
+                  height
+                  url
+                }
+              }
+            }
+          }
+        }
         header
         subheader
         spotifyplaylist
@@ -124,7 +150,7 @@ export async function getStaticProps() {
       spotifyplaylist: json.data.showreelpage.data.attributes.spotifyplaylist,
       header: json.data.showreelpage.data.attributes.header,
       subheader: json.data.showreelpage.data.attributes.subheader,
-
+      seo: json.data.showreelpage.data.attributes.seo[0],
     },
     revalidate: 1,
   };
