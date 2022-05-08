@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Button from "./Button"
 import styles from '../styles/MattPreview.module.css';
-import Matt from '../public/assets/matt.jpg'
+import Link from "next/link";
 
 export default function MattPreview({matt}) {
   return (
@@ -23,7 +23,7 @@ export default function MattPreview({matt}) {
     <p className={styles.text}>
          {matt.homepageintro}
         </p>           <div className={styles.buttons}>
-         <Button text={'MORE ABOUT ME'} />   <Button alternate={true} text={'LETS HAVE A CHAT'} /> 
+       <Link href="/matt"><a> <Button text={'MORE ABOUT ME'} /> </a></Link>  
       </div>
 
         </div>

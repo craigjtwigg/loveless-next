@@ -4,16 +4,17 @@ import { useInView } from 'react-intersection-observer';
 import ContactForm from '../components/ContactForm';
 import FaqCard from '../components/FaqCard';
 import Footer from '../components/Footer';
-import ReactMarkdown from 'react-markdown'
+import SEO from '../components/SEO';
 
-export default function Faq({ faqs }) {
+export default function Faq({ seo, faqs }) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
-
+console.log(seo)
   return (
     <>
+    <SEO seo={seo}/>
     <div className={styles.container}>
       <NavBar inView={inView} />
       <h1 className={styles.title}>FAQ</h1>
@@ -37,6 +38,41 @@ export async function getStaticProps() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: `query FAQS {
+        testimonialspage {
+    data {
+      attributes {
+         seo {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                width
+                height
+                url
+              }
+            }
+          }
+          metaSocial {
+            socialNetwork
+            title
+            description
+            image {
+              data {
+                attributes {
+                  width
+                  height
+                  url
+                }
+              }
+            }
+          }
+        }
+        header
+        subheader
+      }
+    }
+  }      
   faqs {
     data {
       attributes {
@@ -54,6 +90,7 @@ export async function getStaticProps() {
   return {
     props: {
       faqs: json.data.faqs.data,
+      seo: json.data.testimonialspage.data.attributes.seo[0],
     },
     revalidate: 1,
   };

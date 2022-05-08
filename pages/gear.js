@@ -9,16 +9,17 @@ import Image from 'next/image';
 import Carousel from 'react-elastic-carousel';
 import { useRef } from 'react';
 import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
 
-export default function Gear({gear, header, subheader, headerimage, seo}) {
+export default function Gear({ gear, header, subheader, headerimage, seo }) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
   const breakPoints = [
-    {width: 1, itemsToShow: 1},
-    {width: 810, itemsToShow: 4}
-  ]
+    { width: 1, itemsToShow: 1 },
+    { width: 810, itemsToShow: 4 },
+  ];
 
   const itemsPerPage = 4;
 
@@ -26,11 +27,11 @@ export default function Gear({gear, header, subheader, headerimage, seo}) {
   const totalPages = Math.ceil(7 / itemsPerPage);
   let resetTimeout;
 
-  console.log(seo)
+  console.log(seo);
   return (
     <>
-    <SEO seo={seo} />
-    
+      <SEO seo={seo} />
+
       <NavBar inView={inView} />
 
       <div className={styles.container}>
@@ -47,20 +48,15 @@ export default function Gear({gear, header, subheader, headerimage, seo}) {
             />
           </div>
           <div className={styles.hero}>
-            <h1 className={styles.title}>
-              {header}
-            </h1>
-            <p className={styles.text}>
-              {subheader}
-            </p>
+            <h1 className={styles.title}>{header}</h1>
+            <p className={styles.text}>{subheader}</p>
             <div className={styles.cards}>
               <Carousel
-              breakPoints={breakPoints}
+                breakPoints={breakPoints}
                 ref={carouselRef}
                 enableAutoPlay={false}
                 showArrows={true}
                 autoPlaySpeed={6000}
-                
                 onNextEnd={({ index }) => {
                   if (index + 1 === totalPages) {
                     if (carouselRef?.current?.goTo) {
@@ -81,17 +77,17 @@ export default function Gear({gear, header, subheader, headerimage, seo}) {
           </div>
         </>
         <div className={styles.listContainer}>
-        <GearCategory gear={gear} category="guitar" />
-        <GearCategory gear={gear} category="pedal" alt={true}/>
-        <GearCategory gear={gear} category="amp" />
-        <GearCategory gear={gear} category="drum" alt={true}/>
-        <GearCategory gear={gear} category="microphone" />
-        <GearCategory gear={gear} category="monitoring" alt={true}/>
-        <GearCategory gear={gear} category="outboard" />
-</div>
-
+          <GearCategory gear={gear} category="guitar" />
+          <GearCategory gear={gear} category="pedal" alt={true} />
+          <GearCategory gear={gear} category="amp" />
+          <GearCategory gear={gear} category="drum" alt={true} />
+          <GearCategory gear={gear} category="microphone" />
+          <GearCategory gear={gear} category="monitoring" alt={true} />
+          <GearCategory gear={gear} category="outboard" />
+        </div>
       </div>
-<Footer />
+      <ContactForm />
+      <Footer />
     </>
   );
 }

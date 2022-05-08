@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { reviewData, addGoogleReview } from "../data";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 export default function Testimonials({seo, header, subheader, reviews}) {
      const { ref, inView } = useInView({
@@ -41,6 +42,7 @@ export default function Testimonials({seo, header, subheader, reviews}) {
                 Have you made a record here at Loveless Studio??<br /><Link href={addGoogleReview}><a className={styles.a}>Tell people  about the session on Google.</a></Link>
                 </p>
         </div>
+        <ContactForm />
         <Footer />
         </>
 
