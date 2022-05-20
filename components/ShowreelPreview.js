@@ -1,33 +1,18 @@
 import styles from '../styles/ShowreelPreview.module.css';
-import Spotify from './Spotify';
-import Youtube from './Youtube';
-import Link from 'next/link';
 import LabelsRadio from './LabelsRadio';
 
-export default function Showreel() {
+export default function Showreel({labels, labellogos}) {
   return (
     <div className={styles.sectionWrapper}>
       <section id="showreel" className={styles.section}>
-        <h2 className={styles.sectionTitle}>Playlist and Radio ready professional production</h2>
-          <p className={styles.quote}>Loveless Studio productions have featured on major radio shows
-          such as the Radio One Rock Show, BBC Introducing, Radio X as well
-          as countless official Spotify playlists and have been published by labels such
-          as Sony Music, Music For Nations, Society Of Losers and Scylla Records. 
-          </p>
-       {/* <div className={styles.quoteWrapper}>
-          <p className={styles.quote}>
-         " Great attention to detail and fast delivery on a project we did with Matt and Sony Music / Music For Nations "
+        <h2 className={styles.sectionTitle}>
+          {labels.header}
+        </h2>
+        <p className={styles.quote}>
+          {labels.text}
         </p>
-        <p className={styles.quoteAuthor}>- Bobby Pook, <Link href="https://www.blanketofficial.com/"><a>Blanket</a></Link></p>
-       </div>
-       <div className={styles.videoWrapper}>
-             <Youtube videoId="0ET5pQX3iXs" />
-       </div> */}
 
-       
-<LabelsRadio />
-       
-      
+        <LabelsRadio labellogos={labellogos}/>
       </section>
     </div>
   );

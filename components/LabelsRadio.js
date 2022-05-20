@@ -8,10 +8,24 @@ import SocietyOfLosers from '../public/assets/labelsradio/societyoflosers.svg';
 import MusicForNations from '../public/assets/labelsradio/musicfornations.svg';
 import Scylla from '../public/assets/labelsradio/scylla.svg'
 
-export default function LabelsRadio() {
+export default function LabelsRadio({labellogos}) {
   return (
     <div className={styles.container}>
-      <div className={styles.logoWrapper}>
+
+    {labellogos.map(logo => (
+          <div className={styles.logoWrapper}>
+        <Image
+          className={styles.logo}
+          layout="fill"
+          src={logo.attributes.url}
+          alt={logo.attributes.alternativeText}
+        />
+      </div>
+    ))}
+
+
+
+      {/* <div className={styles.logoWrapper}>
         <Image
           className={styles.logo}
           layout="fill"
@@ -76,7 +90,7 @@ export default function LabelsRadio() {
           src={RadioX}
           alt="Loveless Studio productions have featured on Radio X"
         />
-      </div>
+      </div> */}
 
 
     </div>

@@ -11,7 +11,6 @@ export default function Faq({ seo, faqs }) {
     threshold: 0.5,
   });
 
-console.log(seo)
   return (
     <>
     <SEO seo={seo}/>

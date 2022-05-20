@@ -69,9 +69,9 @@ export default function Gear({ gear, header, subheader, headerimage, seo }) {
                   }
                 }}
               >
-                <GearCategoryCard category="guitaomephones" />
+                <GearCategoryCard category="guitar" />
                 <GearCategoryCard category="monitoring" />
-                <GearCategoryCard category="outboard & i/o" />
+                <GearCategoryCard category="outboard" />
               </Carousel>
             </div>
           </div>

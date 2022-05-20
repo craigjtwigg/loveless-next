@@ -1,11 +1,11 @@
 import styles from '../styles/Map.module.css';
 
-export default function Map() {
+export default function Map({mapsection}) {
   return (
     <div className={styles.map}>
         <div className={styles.where}>
-            <h2 className={styles.h2}>Where is Loveless Studio?</h2>
-            <p className={styles.text}>On Greenfield Road in loveley Colne, Lancashire! BB8 9PE - easily accessible from Manchester, Leeds and Liverpool.</p>
+            <h2 className={styles.h2}>{mapsection.header}</h2>
+            <p className={styles.text}>{mapsection.subheader}</p>
         </div>
         <div className={styles.mapWrapper}>
            <iframe

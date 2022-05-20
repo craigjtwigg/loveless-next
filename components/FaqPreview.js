@@ -3,7 +3,7 @@ import FaqCard from "./FaqCard";
 import styles from '../styles/FaqPreview.module.css';
 import Map from "./Map";
 
-export default function faqPreview() {
+export default function faqPreview({mapsection}) {
       const location = {
   address: 'Loveless Studio, Riverside Mill, Greenfield Road, Colne, BB8 9PE',
   lat: 53.853718305507952,
@@ -12,7 +12,7 @@ export default function faqPreview() {
    
 }
   return ( <section id='faq' className={styles.container}>
-      <Map location={location} zoomLevel={17}/>
+      <Map mapsection={mapsection} location={location} zoomLevel={17}/>
 
   </section>
   )

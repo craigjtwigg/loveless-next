@@ -4,15 +4,34 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 
-export default function Home({ reviews, seo, herosection, mattsection, showreelvideo }) {
-
+export default function Home({
+  labellogos,
+  labels,
+  overview,
+  reviews,
+  seo,
+  herosection,
+  mattsection,
+  showreelvideo,
+  mapsection,
+}) 
+{
+  console.log(labellogos)
   return (
     <>
       <SEO seo={seo} />
       <NavBar />
       <Header hero={herosection} />
 
-      <Content matt={mattsection} showreelvideo={showreelvideo} reviews={reviews}/>
+      <Content
+        overview={overview}
+        labels={labels}
+        labellogos={labellogos}
+        matt={mattsection}
+        showreelvideo={showreelvideo}
+        reviews={reviews}
+        mapsection={mapsection}
+      />
       <Footer />
     </>
   );
@@ -27,6 +46,7 @@ export async function getStaticProps() {
         homepage {
           data {
             attributes {
+              overview
               seo {
           metaTitle
           metaDescription
@@ -127,7 +147,33 @@ export async function getStaticProps() {
         youtubeshowreel
       }
     }
-  }    
+  }
+  labelsAndRadio {
+    data {
+      attributes {
+        header
+        text
+        logos{
+          data {
+            attributes{
+              url
+              alternativeText
+              height
+              width
+            }
+          }
+        }
+      }
+    }
+  }
+  mapSection {
+  data {
+    attributes {
+      header
+      subheader
+    }
+  }
+}
     }`,
     }),
   });
@@ -140,7 +186,13 @@ export async function getStaticProps() {
       showreelvideo: json.data.showreelpage.data.attributes.youtubeshowreel,
       mattsection: json.data.mattsection.data.attributes,
       seo: json.data.homepage.data.attributes.seo,
-      reviews: json.data.reviews.data.filter((review) => review.attributes.featured),
+      reviews: json.data.reviews.data.filter(
+        (review) => review.attributes.featured
+      ),
+      overview: json.data.homepage.data.attributes.overview,
+      labels: json.data.labelsAndRadio.data.attributes,
+      labellogos: json.data.labelsAndRadio.data.attributes.logos.data,
+      mapsection: json.data.mapSection.data.attributes,
     },
     revalidate: 1,
   };

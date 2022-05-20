@@ -9,17 +9,17 @@ import FaqPreview from './FaqPreview';
 import AudioPlayer from './AudioPlayer';
 import MattPreview from './MattPreview';
 
-export default function Content({reviews, matt, showreelvideo}) {
+export default function Content({mapsection, overview, labels, labellogos, reviews, matt, showreelvideo}) {
   return (
     <>
-      <Intro showreelvideo={showreelvideo}/>
+      <Intro overview={overview} showreelvideo={showreelvideo}/>
 
-      <ShowreelPreview />
+      <ShowreelPreview labels={labels} labellogos={labellogos}/>
 
       <TestimonialsPreview reviews={reviews}/>
 
       {/* <GearPreview /> */}
-      <FaqPreview />
+      <FaqPreview mapsection={mapsection}/>
       <MattPreview matt={matt}/>
       <ContactForm />
     </>
