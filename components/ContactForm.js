@@ -1,7 +1,33 @@
 import styles from '../styles/ContactForm.module.css';
 import Button from './Button';
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
+
 
 export default function ContactForm(props) {
+   const [isSent, setIsSent] = useState(false);
+     const form = useRef();
+
+   const sendEmail = (e) => {
+    e.preventDefault();
+      emailjs
+        .sendForm(
+          'service_yuga0lv',
+          'template_43qigbt',
+          form.current,
+          'zEiQmdjyKZb_7eNp9'
+        )
+        .then(
+          (result) => {
+            setIsSent(true)
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+  };
+
   return (
     <section id='contact' className={styles.container}>
       <div className={styles.textWrapper}>
@@ -9,13 +35,13 @@ export default function ContactForm(props) {
         <p className={styles.text}>{props.faq ? (`Get intouch below and Matt will answer ASAP!`) : (`Fill in this contact form and make your first step towards bringing your next project to life, Matt will be back in touch with you ASAP.`) }</p>
       </div>
       
-      <form className={styles.form}>
+      <form className={styles.form} ref={form} onSubmit={sendEmail}> 
         <div className={styles.nameEmailWrapper}>
           <div className={styles.nameWrapper}>
             <label className={styles.label} htmlFor="name">Your Name</label>
             <input
               type="text"
-              name="name"
+              name="user_name"
               className={styles.name}
               tabIndex="1"
             />
@@ -24,7 +50,7 @@ export default function ContactForm(props) {
             <label className={styles.label} htmlFor="email">E-Mail</label>
             <input
               type="email"
-              name="email"
+              name="user_email"
               className={styles.email}
               tabIndex="2"
             />
@@ -43,7 +69,7 @@ export default function ContactForm(props) {
           <label className={styles.label} htmlFor="message">Message</label>
           <textarea name="message" className={styles.message} tabIndex="4" />
         </div>
-        <Button text={'SEND YOUR MESSAGE'} />
+        <Button form={true} text={'SEND YOUR MESSAGE'} />
       </form>
     </section>
   );

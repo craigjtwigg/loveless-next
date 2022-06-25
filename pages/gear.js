@@ -27,7 +27,7 @@ export default function Gear({ gear, header, subheader, headerimage, seo }) {
   const totalPages = Math.ceil(7 / itemsPerPage);
   let resetTimeout;
 
-  console.log(seo);
+  
   return (
     <>
       <SEO seo={seo} />
