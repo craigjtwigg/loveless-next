@@ -68,8 +68,8 @@ height: 100%;
     display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
-  font-size: 2rem;
+  align-items: flex-start;
+  font-size: 18px;
   background-color: var(--main-bg);
   background: linear-gradient(151deg, #ff82b26e, #6c439448),
     radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
@@ -85,9 +85,9 @@ height: 100%;
   display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
-  font-size: 2rem;
-  padding: 2rem;
+  align-items:flex-end;
+  font-size: 20px;
+  padding: 0px 2rem;
   background-color: var(--main-bg);
   background: linear-gradient(151deg, #ff82b26e, #6c439448),
     radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 0, 0, 0)),
@@ -103,7 +103,8 @@ height: 100%;
     grid-area: stars;
     display: flex;
     justify-self: center;
-    width: 60%;
+    align-items: center;
+    width: 20%;
     filter: invert(1) brightness(0.9);
     mix-blend-mode: color-dodge;
 }

@@ -8,7 +8,8 @@
 
 .title {
     margin: 0px;
-    
+    font-size: 18px;
+    mix-blend-mode: normal;
 }
 
 .titleWrapper {
@@ -19,6 +20,8 @@
 
 .text {
     margin: auto;
+    font-size: 18px;
+    padding: 2rem 0px 3rem 0px;
 }
 
 .video {
@@ -34,12 +37,13 @@
     flex-direction: column;
     justify-content: space-between;
     height: max-content;
-    
+    font-size: 18px;
      transition: 1s ease;
      filter: opacity(1);
 }
 
 .hidden {
+    font-size: 18px;
     width: 90vw;
     height: 0px;
     overflow: hidden;

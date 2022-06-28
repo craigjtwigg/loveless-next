@@ -50,7 +50,7 @@ export default function Gear({ gear, header, subheader, headerimage, seo }) {
           <div className={styles.hero}>
             <h1 className={styles.title}>{header}</h1>
             <p className={styles.text}>{subheader}</p>
-            <div className={styles.cards}>
+            {/* <div className={styles.cards}>
               <Carousel
                 breakPoints={breakPoints}
                 ref={carouselRef}
@@ -73,7 +73,7 @@ export default function Gear({ gear, header, subheader, headerimage, seo }) {
                 <GearCategoryCard category="monitoring" />
                 <GearCategoryCard category="outboard" />
               </Carousel>
-            </div>
+            </div> */}
           </div>
         </>
         <div className={styles.listContainer}>

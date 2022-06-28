@@ -15,7 +15,7 @@
 }
 
 .question {
-    font-size: 2rem;
+    font-size: 20px;
     background-color: var(--main-bg);
   background: linear-gradient(151deg, #f7f7f76e, #ffffff48),
     radial-gradient(circle at 40% 124%, rgb(255, 255, 255), rgba(255, 255, 255, 0)),
@@ -27,19 +27,20 @@
 
 .answer {
     color: rgba(255, 255, 255, 0.795);
-    font-size: 1.8rem;
+    font-size: 18px;
     text-align: center;
     padding-top: 2rem ;
     height: fit-content;
     transition: 15ms;
 }
 
+
 .hidden {
     color: rgba(255, 255, 255, 0);
     height: 0px;
     overflow: hidden;
     transition: 2ms;
-    font-size: 1.8rem;
+    font-size: 18px;
     text-align: center;
 }
 

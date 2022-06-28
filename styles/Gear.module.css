@@ -1,5 +1,6 @@
 .container {
     min-height: 100vh;
+
 }
 
 .headerImage {
@@ -9,13 +10,18 @@
   object-position: 0vw -12vw;
 }
 
+.text {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
 .header {
-    height: 88vh;
+    height: 50vh;
     overflow: hidden;
     position: relative;
       mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 25%,
    
     rgba(0, 0, 0, 0.027) 99%,
     transparent
@@ -23,7 +29,7 @@
 
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 1) 35%,
+    rgba(0, 0, 0, 1) 25%,
 
     rgba(0, 0, 0, 0.027) 99%,
     transparent
@@ -57,9 +63,9 @@
     align-items: center;
     text-align: center;
     position: absolute;
-    top:12vh;
+    top:20vh;
     padding: 0px 5%;
-    height: 80%;
+ gap: 2rem;
     justify-content: space-between;
 }
 

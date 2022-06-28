@@ -29,6 +29,11 @@ export default function ContactForm(props) {
   };
 
   return (
+    isSent ? (<section className={styles.confirmation}>
+      <p className={styles.text}>Awesome! Your message has been sent to Matt - you should recieve a confirmation of this in your inbox (maybe check your spam folder)!</p>
+      
+      <p className={styles.text}>Matt will be in touch with you ASAP!</p>
+    </section>) : (
     <section id='contact' className={styles.container}>
       <div className={styles.textWrapper}>
         <h2>{props.faq ? ('Did you have a different question for Matt?') : (`Let's make a record together`)}</h2>
@@ -72,5 +77,5 @@ export default function ContactForm(props) {
         <Button form={true} text={'SEND YOUR MESSAGE'} />
       </form>
     </section>
-  );
+  ));
 }

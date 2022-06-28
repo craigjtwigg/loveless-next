@@ -8,6 +8,10 @@ gap: 1 rem;
 
 }
 
+.text {
+  font-size: 18px;
+}
+
 .iframe{
     width: 80vw;
     height: 40vw;
