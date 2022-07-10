@@ -21,7 +21,8 @@
   cursor: pointer;
 }
 
-.title, .modalTitle {
+.title,
+.modalTitle {
   margin: 0px;
   font-size: 18px;
   mix-blend-mode: normal;
@@ -103,7 +104,7 @@
   border-radius: 10px;
   max-height: 90vh;
   overflow: scroll;
-    gap: 1rem;
+  gap: 1rem;
 }
 
 .modalTitle {
@@ -124,19 +125,9 @@
   grid-area: image;
 }
 
-@media screen and (max-width: 650px) {
-    .modalImageWrapper {
-            max-width: 100%;
-            grid-area: image;
-        }
-
-    .modalText {
-        order: -1;
-    }    
-}
-
-.modalImageWrapper, .video {
-    margin-top: 2rem;
+.modalImageWrapper,
+.video {
+  margin-top: 2rem;
 }
 
 .close {
@@ -154,4 +145,23 @@
   height: 0px;
   overflow: hidden;
   filter: opacity(0);
+}
+
+@media screen and (max-width: 650px) {
+  .modalImageWrapper {
+    max-width: 100%;
+    grid-area: image;
+  }
+
+  .modalText {
+    order: -1;
+  }
+
+  .close {
+    cursor: pointer;
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+  }
 }
