@@ -82,6 +82,7 @@
 }
 
 .modal {
+    position: relative;
   display: flex;
   flex-wrap: wrap;
   /* grid-template-areas:
