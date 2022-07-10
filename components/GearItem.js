@@ -35,17 +35,19 @@ export default function GearItem(props) {
     </div>
       <div className={isActive ? styles.visible : styles.hidden}>
         <article className={styles.modal}>
-        <h3 className={styles.title}>{props.item.attributes.name}</h3>
+        <h3 className={styles.modalTitle}>{props.item.attributes.name}</h3>
           {imageData ? (<div className={styles.modalImageWrapper}><Image 
       src={imageData.attributes.url}
       alt="blah"
       width={imageData.attributes.width}
       height={imageData.attributes.height}
       // objectFit='cover'
-      layout='responsive'/></div>) : null}
-        <p className={styles.text}>{props.item.attributes.description}</p>
+      layout='intrinsic'/></div>) : null}
+       
         {props.item.attributes.video && <div className={styles.video}><Youtube youTubeLink={props.item.attributes.video} />
         </div>}
+
+         <p className={styles.modalText}>{props.item.attributes.description}</p>
          <div onClick={() => toggleActive()} className={styles.close}>
             <Image src={Close} alt='close modal' />
           </div>
