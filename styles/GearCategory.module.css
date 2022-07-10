@@ -1,9 +1,11 @@
-.container, .alt {
+.items {
    padding: 3rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 .alt {
@@ -34,6 +36,7 @@
     margin: 0px;
     mix-blend-mode: normal;
     color: white;
+    text-align: center;
 }
 
 @media screen and (max-width: 810px) {

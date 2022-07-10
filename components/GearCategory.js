@@ -11,23 +11,29 @@ export default function GearCategory(props) {
 
   const categoryTitle =
     props.category === 'guitar'
-      ? 'guitars & basses'
+      ? 'Guitars & Basses'
       : props.category === 'pedal'
-      ? 'pedals'
+      ? 'Pedals'
       : props.category === 'amp'
-      ? 'amps & cabs'
+      ? 'Amps & Cabs'
       : props.category === 'microphone'
-      ? 'microphones'
+      ? 'Microphones'
       : props.category === 'outboard'
-      ? 'outboard & i/o' :
+      ? 'Outboard & I/O'
+      : props.category === 'monitoring'
+      ? 'Monitoring'
+      : props.category === 'drum'
+      ? 'Drums & Cymbals' :
       props.category;
   return (
-    <div id={props.category} className={props.alt ? styles.alt : styles.container}>
+    <div id={props.category} className={styles.container}>
 
       <h2 className={styles.title}>{categoryTitle}</h2>
+      <div className={styles.items}>
       {categoryData.map((item, idx) => (
        <GearItem key={idx} item={item}/>
       ))}
+      </div>
     </div>
   );
 }

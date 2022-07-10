@@ -11,7 +11,7 @@ import { useRef } from 'react';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 
-export default function Gear({ gear, header, subheader, headerimage, seo }) {
+export default function Gear({ gearimage, gear, header, subheader, headerimage, seo }) {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -30,6 +30,7 @@ export default function Gear({ gear, header, subheader, headerimage, seo }) {
   
   return (
     <>
+    {console.log(gearimage)}
       <SEO seo={seo} />
 
       <NavBar inView={inView} />
@@ -105,6 +106,15 @@ export async function getStaticProps() {
         category
         description
         video
+        image {
+          data {
+            attributes {
+              width
+              height
+              url
+            }
+          }
+        }
       }
     }
   }
