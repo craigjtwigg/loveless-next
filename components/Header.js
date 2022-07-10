@@ -38,7 +38,7 @@ export default function Header({hero}) {
               <Image
                 className={styles.room}
                 priority="true"
-                src={hero.topmobileimage.data.attributes.url}
+                src={hero.bottommobileimage.data.attributes.url}
                 alt="promotional image of Loveless Studio producer Matt Heap at the studio."
                 width={1500}
                 height={1000}
